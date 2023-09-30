@@ -4,7 +4,7 @@ Note: This textbook is a work in progress. last updated date.
 
 This website is built by <http://www.isadeh.com>. I aim to use this website to upload and organize everything I know about chemistry.
 
-For the next few months, the textbook will consist mostly of stuff I have learned at UBC studying organic chemistry.
+Im not sure what this textbook will be about in the end, for now it will be about linux and ethical hacking.
 
 I may have more textbooks available in the future at https://www.programado.dev/
 
