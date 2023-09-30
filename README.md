@@ -33,7 +33,7 @@ https://jupyterbook.org/en/stable/start/create.html
 
 https://jupyterbook.org/en/stable/start/build.html#build-your-book
 
-    jupyter-book build mybookname/
+    jupyter-book build name/
 
 *Create your own content file*
 
@@ -45,7 +45,7 @@ https://jupyterbook.org/en/stable/start/publish.html
 
 -  every time i make changes, do the following:
 
-To update your online book, make changes to your book’s content on the main branch of your repository, re-build your book with <code>jupyter-book build cplusplus/</code> and then use <code>ghp-import -n -p -f cplusplus/_build/html</code> as before to push the newly built HTML to the <code>gh-pages</code> branch.
+To update your online book, make changes to your book’s content on the main branch of your repository, re-build your book with <code>jupyter-book build name/</code> and then use <code>ghp-import -n -p -f name/_build/html</code> as before to push the newly built HTML to the <code>gh-pages</code> branch.
 
 ## Publishing the website
 
