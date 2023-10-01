@@ -1,0 +1,593 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installations &#8212; My Commonplace Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Operating Systems/install';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Kali Linux" href="start.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Commonplace Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Operating Systems</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="start.html">Kali Linux</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installations</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/IddoSadeh/noname" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/IddoSadeh/noname/issues/new?title=Issue%20on%20page%20%2FOperating Systems/install.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Operating Systems/install.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Installations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-download-virtualbox-and-kali-linux">Step 1: Download VirtualBox and Kali Linux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-1-download-virtualbox">Step 1.1: Download VirtualBox</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-2-download-kali-linux">Step 1.2: Download Kali Linux</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-install-virtualbox-and-set-up-xubuntu">Step 2: Install VirtualBox and set up Xubuntu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-1-install-virtualbox">Step 2.1: Install VirtualBox</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-2-using-virtualbox-with-kali-linux">Step 2.2: Using VirtualBox with Kali Linux</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-logging-in">Step 3: Logging In</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-safely-shutting-down-your-vm">Step 5: Safely shutting down your VM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-shutting-down-from-inside-the-vm-with-ui">Option 1 - Shutting down from inside the VM with UI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-shutting-down-from-inside-the-vm-with-the-terminal">Option 2 - Shutting down from inside the VM with the terminal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-3-shutting-down-from-outside-the-vm">Option 3 - Shutting down from outside the VM</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="installations">
+<h1>Installations<a class="headerlink" href="#installations" title="Permalink to this headline">#</a></h1>
+<p>There are two ways to run linux:</p>
+<ul class="simple">
+<li><p>Virtual Machine</p></li>
+<li><p>Hard Install on to your computer</p></li>
+</ul>
+<p>We will use a virtual machine for this textbook.</p>
+<p>Follow the following steps to do so:</p>
+<p><em>Note: These steps have been adapted from <a class="reference external" href="https://www.theodinproject.com/lessons/foundations-installations">The Odin Project</a>. However, we make some important changes in this tutorial, so please follow along here.</em></p>
+<div class="section" id="step-1-download-virtualbox-and-kali-linux">
+<h2>Step 1: Download VirtualBox and Kali Linux<a class="headerlink" href="#step-1-download-virtualbox-and-kali-linux" title="Permalink to this headline">#</a></h2>
+<p>Installing a VM is a simple process. This guide uses Oracle’s VirtualBox program to create and run the VM. This program is open-source, free, and simple. What more can you ask for? Now, let’s make sure we have everything downloaded and ready for installation.</p>
+<div class="section" id="step-1-1-download-virtualbox">
+<h3>Step 1.1: Download VirtualBox<a class="headerlink" href="#step-1-1-download-virtualbox" title="Permalink to this headline">#</a></h3>
+<p><a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">Click here</a> and download VirtualBox for Windows hosts.</p>
+</div>
+<div class="section" id="step-1-2-download-kali-linux">
+<h3>Step 1.2: Download Kali Linux<a class="headerlink" href="#step-1-2-download-kali-linux" title="Permalink to this headline">#</a></h3>
+<p>Head over to the official kali download page for <a class="reference external" href="https://www.kali.org/get-kali/#kali-virtual-machines">virtual machines</a>.</p>
+<p>You will see icons for downloading Kali images for differnet virtual machines, since we are using VirtualBox click on the icon circled in red:</p>
+<p><img alt="Alt text" src="../_images/kali_install.png" /></p>
+</div>
+</div>
+<div class="section" id="step-2-install-virtualbox-and-set-up-xubuntu">
+<h2>Step 2: Install VirtualBox and set up Xubuntu<a class="headerlink" href="#step-2-install-virtualbox-and-set-up-xubuntu" title="Permalink to this headline">#</a></h2>
+<div class="section" id="step-2-1-install-virtualbox">
+<h3>Step 2.1: Install VirtualBox<a class="headerlink" href="#step-2-1-install-virtualbox" title="Permalink to this headline">#</a></h3>
+<p>Installing VirtualBox is very straightforward. It doesn’t require much technical knowledge and is the same process as installing any other program. Double clicking the downloaded VirtualBox file will start the installation process.</p>
+<details markdown="block">
+<summary class="dropDown-header">
+<b>Windows users - Errors:</b>
+</summary>
+<p>If you receive an error about needing Microsoft Visual C++ 2019 Redistributable Package, you can find it on <a class="reference external" href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022">official Microsoft Learn page</a>. You most likely want the version with <code class="docutils literal notranslate"><span class="pre">X64</span></code> Architecture (that means 64-bit) - download and install it then try installing VirtualBox again.</p>
+<p>Make sure you install the application on <code class="docutils literal notranslate"><span class="pre">C:</span></code> drive, as it has tendency to error out otherwise. The virtual machine itself can be installed anywhere but we’ll get to that soon.
+As the software installs, the progress bar might appear to be stuck; just wait for it to finish.</p>
+</details>
+<details markdown="block">
+<summary class="dropDown-header">
+<b>Mac users - Errors:</b>
+</summary>
+<p>If you run in to a message saying “installation failed” follow the instructions at 2:50 in the following video:</p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=hd0Lbtly41Y">
+</iframe>
+</details>
+</div>
+<div class="section" id="step-2-2-using-virtualbox-with-kali-linux">
+<h3>Step 2.2: Using VirtualBox with Kali Linux<a class="headerlink" href="#step-2-2-using-virtualbox-with-kali-linux" title="Permalink to this headline">#</a></h3>
+<p>The nice thing about the wat we chose to download Kali Linux is that there arent oo many steps left before we can start working.</p>
+<p>There are two steps you need:</p>
+<p>launch the VirtualBox program. Once open, you should see the start screen.</p>
+<p><img alt="The VirtualBox start screen" src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/03_start_screen.png" /></p>
+<p>Click on the <strong>Add</strong> button, navigate to the location you saved the unzipped download, and click the only file you see.</p>
+<p>If you are sturggling with the installations, you can follow the <a class="reference external" href="https://www.kali.org/docs/virtualization/import-premade-virtualbox/">offiical documentation</a>.</p>
+</div>
+</div>
+<div class="section" id="step-3-logging-in">
+<h2>Step 3: Logging In<a class="headerlink" href="#step-3-logging-in" title="Permalink to this headline">#</a></h2>
+<p>Once the operating systems finishes setting up, you should see a prompt for login information:</p>
+<p><img alt="Alt text" src="../_images/login.png" /></p>
+<p>The default username and password are both <strong>kali</strong>.</p>
+<p>Feel free to now enter full screen mode by pressing the view drop down menu and choosing Full-screen.</p>
+<p><img alt="Alt text" src="../_images/view.png" /></p>
+<p>To exist full screen mode, click the Host key + f.
+The Host key is pre defined to be the *<em>right</em> Ctrl key on your keyboard.</p>
+</div>
+<div class="section" id="step-5-safely-shutting-down-your-vm">
+<h2>Step 5: Safely shutting down your VM<a class="headerlink" href="#step-5-safely-shutting-down-your-vm" title="Permalink to this headline">#</a></h2>
+<p>You don’t pull the plug on your everyday use computer, right? Why would you do the same to your virtual computer? When you click the X button and just close out your VM, you might as well say goodbye to your files. In this section, you’ll understand three ways you can shut off your VM.</p>
+<div class="section" id="option-1-shutting-down-from-inside-the-vm-with-ui">
+<h3>Option 1 - Shutting down from inside the VM with UI<a class="headerlink" href="#option-1-shutting-down-from-inside-the-vm-with-ui" title="Permalink to this headline">#</a></h3>
+<p>Clicking the power icon will give you several options on how to modify your session, including <strong>Shutting Down</strong>.</p>
+<p>The power icon is in the top right of your screen (circled in red):</p>
+<p><img alt="Alt text" src="../_images/power.png" /></p>
+</div>
+<div class="section" id="option-2-shutting-down-from-inside-the-vm-with-the-terminal">
+<h3>Option 2 - Shutting down from inside the VM with the terminal<a class="headerlink" href="#option-2-shutting-down-from-inside-the-vm-with-the-terminal" title="Permalink to this headline">#</a></h3>
+<p>Simply enough, typing <code class="docutils literal notranslate"><span class="pre">poweroff</span></code> will do in this case. Your system will immediately shutdown.</p>
+</div>
+<div class="section" id="option-3-shutting-down-from-outside-the-vm">
+<h3>Option 3 - Shutting down from outside the VM<a class="headerlink" href="#option-3-shutting-down-from-outside-the-vm" title="Permalink to this headline">#</a></h3>
+<p>The last way to accomplish this goal of safely shutting down is by using the VM interface. Clicking on the File tab and hitting the close button (which also has a Power Icon) will bring up a popup titled <strong>Close Virtual Machine</strong>. This popup asks if you want to <strong>Save the machine state</strong>, <strong>Send the shutdown signal</strong>, or <strong>Power off the machine</strong>.</p>
+<p><img alt="VM File Menu" src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/19_vbox_close.png" /></p>
+<p><img alt="Close Virtual Machine Menu" src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/20_send_shutdown.png" /></p>
+<p>To be safe, click the <strong>Send the shutdown signal</strong> radio and hit OK. This will safely power down your VM and your files will not get corrupted.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Operating Systems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="start.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Kali Linux</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-download-virtualbox-and-kali-linux">Step 1: Download VirtualBox and Kali Linux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-1-download-virtualbox">Step 1.1: Download VirtualBox</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-2-download-kali-linux">Step 1.2: Download Kali Linux</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-install-virtualbox-and-set-up-xubuntu">Step 2: Install VirtualBox and set up Xubuntu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-1-install-virtualbox">Step 2.1: Install VirtualBox</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-2-using-virtualbox-with-kali-linux">Step 2.2: Using VirtualBox with Kali Linux</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-logging-in">Step 3: Logging In</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-safely-shutting-down-your-vm">Step 5: Safely shutting down your VM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-shutting-down-from-inside-the-vm-with-ui">Option 1 - Shutting down from inside the VM with UI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-shutting-down-from-inside-the-vm-with-the-terminal">Option 2 - Shutting down from inside the VM with the terminal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-3-shutting-down-from-outside-the-vm">Option 3 - Shutting down from outside the VM</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Iddo Sadeh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

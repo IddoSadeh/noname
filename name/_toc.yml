@@ -5,4 +5,8 @@ format: jb-book
 root: intro
 parts:
 - caption: Operating Systems
-- file: name/start.md
+  chapters:
+  - file: Operating Systems/start.md
+  - file: Operating Systems/install.md
+  - file: Operating Systems/kali.md
+
