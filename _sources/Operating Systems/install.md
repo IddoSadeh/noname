@@ -55,7 +55,7 @@ As the software installs, the progress bar might appear to be stuck; just wait f
 If you run in to a message saying "installation failed" follow the instructions at 2:50 in the following video:
 
 <iframe width="420" height="315"
-src="https://www.youtube.com/watch?v=hd0Lbtly41Y">
+src="https://www.youtube.com/embded/hd0Lbtly41Y">
 </iframe>
 
 </details>
