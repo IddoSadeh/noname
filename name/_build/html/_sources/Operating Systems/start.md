@@ -6,13 +6,13 @@ Linux is an open source operating system - a free version of WindowsOS or MacOS.
 
 Watch this video for a fun explanation:
 <iframe width="420" height="315"
-src="https://www.youtube.com/watch?v=rrB13utjYV4">
+src="https://www.youtube.com/embed/rrB13utjYV4">
 </iframe>
 
 Linux has many different distributions - many different versions. The reason there are so many options for linux is copmlicated, ach linux distribution has a unique histroy and use case. Watch another Fireship video to learn more about this and the history of linux:
 
 <iframe width="420" height="315"
-src="https://youtu.be/ShcR4Zfc6Dw?si=ef7kIAuPkgHPdj1w&t=37">
+src="https://www.youtube.com/embed/ShcR4Zfc6Dw&t=37s">
 </iframe>
 
 
