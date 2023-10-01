@@ -1,0 +1,766 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linux for Ethical Hackers &#8212; My Commonplace Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'start';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome!" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Commonplace Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Operating Systems</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Linux for Ethical Hackers</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/IddoSadeh/noname" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/IddoSadeh/noname/issues/new?title=Issue%20on%20page%20%2Fstart.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/start.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Linux for Ethical Hackers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installations">Installations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-download-virtualbox-and-kali-linux">Step 1: Download VirtualBox and Kali Linux</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#important">IMPORTANT</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-1-download-virtualbox">Step 1.1: Download VirtualBox</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-2-download-kali-linux">Step 1.2: Download Kali Linux</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-install-virtualbox-and-set-up-xubuntu">Step 2: Install VirtualBox and set up Xubuntu</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-1-install-virtualbox">Step 2.1: Install VirtualBox</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-2-prepare-virtualbox-for-xubuntu">Step 2.2: Prepare VirtualBox for Xubuntu</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-2-1-unattended-guest-os-install-setup">Step 2.2.1: Unattended guest OS install setup</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-2-2-hardware">Step 2.2.2: Hardware</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-2-3-virtual-hard-disk">Step 2.2.3: Virtual hard disk</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-2-4-begin-the-unattended-installation">Step 2.2.4: Begin the unattended installation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-setting-correct-sudo-permissions">Step 3: Setting correct sudo permissions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-1-navigate-to-users-and-group">Step 3.1: Navigate to users and group</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-2-manage-groups">Step 3.2: Manage groups</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-2-add-yourself-to-sudo">Step 3.2: Add yourself to sudo</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-3-reboot-your-vm">Step 3.3: Reboot your VM</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-4-test-your-newly-gained-sudo-privileges">Step 3.4: Test your newly gained sudo privileges</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-understand-your-new-vm">Step 4: Understand your new VM</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#frequent-issues-questions">Frequent issues/questions:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-safely-shutting-down-your-vm">Step 5: Safely shutting down your VM</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-shutting-down-from-inside-the-vm-with-ui">Option 1 - Shutting down from inside the VM with UI</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-shutting-down-from-inside-the-vm-with-the-terminal">Option 2 - Shutting down from inside the VM with the terminal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#option-3-shutting-down-from-outside-the-vm">Option 3 - Shutting down from outside the VM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kali-linux-overview">Kali Linux overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-file-systems">Navigating file systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users-and-priveleges">Users and Priveleges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-network-commands">Common Network Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-creating-and-editing-files">Viewing, Creating, and Editing Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-stopping-services">Starting and Stopping Services</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-updating-tools">Installing and Updating Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting-with-bash">Scripting with Bash</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="linux-for-ethical-hackers">
+<h1>Linux for Ethical Hackers<a class="headerlink" href="#linux-for-ethical-hackers" title="Permalink to this headline">#</a></h1>
+<div class="section" id="installations">
+<h2>Installations<a class="headerlink" href="#installations" title="Permalink to this headline">#</a></h2>
+<p>There are two ways to run linux:</p>
+<ul class="simple">
+<li><p>Virtual Machine</p></li>
+<li><p>Hard Install on to YOu computer</p></li>
+</ul>
+<p>We will use a virtual machine for this textbook.</p>
+<p>Follow the following steps to do so:</p>
+<p><em>Note: These steps have been adapted from <a class="reference external" href="https://www.theodinproject.com/lessons/foundations-installations">The Odin Project</a>. However, we make some important changes in this tutorial, so please follow along here.</em></p>
+<div class="section" id="step-1-download-virtualbox-and-kali-linux">
+<h3>Step 1: Download VirtualBox and Kali Linux<a class="headerlink" href="#step-1-download-virtualbox-and-kali-linux" title="Permalink to this headline">#</a></h3>
+<p>Installing a VM is a simple process. This guide uses Oracle’s VirtualBox program to create and run the VM. This program is open-source, free, and simple. What more can you ask for? Now, let’s make sure we have everything downloaded and ready for installation.</p>
+<div class="section" id="important">
+<h4>IMPORTANT<a class="headerlink" href="#important" title="Permalink to this headline">#</a></h4>
+<p>Once you have completed these instructions, <strong>you are expected to work entirely in the VM.</strong> Maximize the window, add more virtual monitors if you have them, fire up the Internet Browser in the <strong>Whisker Menu</strong> <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/00_whisker_icon.png" alt="The blue-white rodent Whisker Menu Icon" style="display: inline; margin: auto;"> on the top left of the desktop. You should not be using anything outside of the VM while working on The Odin Project. If you feel like you have a good understanding after using the VM for a while, and or want to improve your experience, we recommend dual-booting Ubuntu, which there are instructions for below.</p>
+</div>
+<div class="section" id="step-1-1-download-virtualbox">
+<h4>Step 1.1: Download VirtualBox<a class="headerlink" href="#step-1-1-download-virtualbox" title="Permalink to this headline">#</a></h4>
+<p><a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">Click here</a> and download VirtualBox for Windows hosts.</p>
+</div>
+<div class="section" id="step-1-2-download-kali-linux">
+<h4>Step 1.2: Download Kali Linux<a class="headerlink" href="#step-1-2-download-kali-linux" title="Permalink to this headline">#</a></h4>
+<p>Head over to the official kali download page for <a class="reference external" href="https://www.kali.org/get-kali/#kali-virtual-machines">virtual machines</a>.</p>
+<p>You will see icons for downloading Kali images for differnet virtual machines, since we are using VirtualBox click on the icon circled in red:</p>
+<p><img alt="Alt text" src="_images/kali_install.png" /></p>
+</div>
+</div>
+<div class="section" id="step-2-install-virtualbox-and-set-up-xubuntu">
+<h3>Step 2: Install VirtualBox and set up Xubuntu<a class="headerlink" href="#step-2-install-virtualbox-and-set-up-xubuntu" title="Permalink to this headline">#</a></h3>
+<div class="section" id="step-2-1-install-virtualbox">
+<h4>Step 2.1: Install VirtualBox<a class="headerlink" href="#step-2-1-install-virtualbox" title="Permalink to this headline">#</a></h4>
+<p>Installing VirtualBox is very straightforward. It doesn’t require much technical knowledge and is the same process as installing any other program. Double clicking the downloaded VirtualBox file will start the installation process.</p>
+<details markdown="block">
+<summary class="dropDown-header">
+<b>Windows users - Errors:</b>
+</summary>
+<p>If you receive an error about needing Microsoft Visual C++ 2019 Redistributable Package, you can find it on <a class="reference external" href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022">official Microsoft Learn page</a>. You most likely want the version with <code class="docutils literal notranslate"><span class="pre">X64</span></code> Architecture (that means 64-bit) - download and install it then try installing VirtualBox again.</p>
+<p>Make sure you install the application on <code class="docutils literal notranslate"><span class="pre">C:</span></code> drive, as it has tendency to error out otherwise. The virtual machine itself can be installed anywhere but we’ll get to that soon.
+As the software installs, the progress bar might appear to be stuck; just wait for it to finish.</p>
+</details>
+<details markdown="block">
+<summary class="dropDown-header">
+<b>Mac users - Errors:</b>
+</summary>
+<p>If you run in to a message saying “installation failed” follow the instructions at 2:50 in the following video:</p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=hd0Lbtly41Y">
+</iframe>
+</details>
+</div>
+<div class="section" id="step-2-2-prepare-virtualbox-for-xubuntu">
+<h4>Step 2.2: Prepare VirtualBox for Xubuntu<a class="headerlink" href="#step-2-2-prepare-virtualbox-for-xubuntu" title="Permalink to this headline">#</a></h4>
+<p>Now that you have VirtualBox installed, launch the program. Once open, you should see the start screen.</p>
+<p><img alt="The VirtualBox start screen" src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/03_start_screen.png" /></p>
+<p>Click on the <strong>New</strong> button to create a virtual operating system. Give it a name of <strong>Xubuntu</strong>, if you want the VM installed somewhere else than default <code class="docutils literal notranslate"><span class="pre">C:</span></code> location, change that accordingly in the <strong>Folder</strong> option. This is the place where your virtual disk will reside, so make sure that you’ve got at least 30GB for that. In <strong>ISO Image</strong> choose <strong>Other</strong> - you’ll see a window open for you to find the <code class="docutils literal notranslate"><span class="pre">.iso</span></code> file on your PC. It most likely is in the <code class="docutils literal notranslate"><span class="pre">Downloads</span></code> folder. Leave <strong>Skip Unattended Installation</strong> as it is.</p>
+<p><img alt="Half of the options being greyed out is normal. Don't worry about it." src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/04_install_start.png" /></p>
+<p>Continue by pressing <strong>Next</strong> and follow the next steps:</p>
+</div>
+<div class="section" id="step-2-2-1-unattended-guest-os-install-setup">
+<h4>Step 2.2.1: Unattended guest OS install setup<a class="headerlink" href="#step-2-2-1-unattended-guest-os-install-setup" title="Permalink to this headline">#</a></h4>
+<p>You should see a window like this one now:</p>
+<p><img alt="No need to worry about the Product Key." src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/05_unattended_install.png" /></p>
+<p>You want to tick the <strong>Guest Additions</strong> and <strong>Install in Background</strong> options and also change your <strong>Username</strong> and <strong>Password</strong> fields to your liking. Note that your username must be all lower-case and no more than 32 characters. If you forget to change the default password, it will be <code class="docutils literal notranslate"><span class="pre">changeme</span></code>. Leave the <strong>Guest Additions ISO</strong>, <strong>Hostname</strong> and <strong>Domain Name</strong> as they are. Continue by pressing <strong>Next</strong>.</p>
+</div>
+<div class="section" id="step-2-2-2-hardware">
+<h4>Step 2.2.2: Hardware<a class="headerlink" href="#step-2-2-2-hardware" title="Permalink to this headline">#</a></h4>
+<p><img alt="You might be tempted to give your VM more than 2 processors. Don't." src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/06_hardware.png" /></p>
+<p>In the <strong>Hardware</strong> section of the installation you want to set your <strong>Base Memory</strong> to at least 2048 MB or more if possible - the upper limit is half of your total RAM but 4096 MB with the settings we recommend should give you a smooth experience.</p>
+<p>For example, if you have 8 GB (8192 MB respectively) of RAM, you could allocate up to 4096 MB (1024 MB to 1 GB) to your VM’s operating system. If you do not know how much RAM is available to you, <a class="reference external" href="https://www.google.com/search?q=how+to+find+out+how+much+ram+you+have">please run this Google query</a> to learn how to find this out. If the VM runs a bit slow, try allocating more memory!</p>
+<p><em>(<strong>note:</strong> Difficulty converting your <strong>G</strong>iga<strong>B</strong>ytes into <strong>M</strong>ega<strong>B</strong>ytes? 1 GB of RAM is equal to 1024 MB. Therefore, you can say that <strong>8 GB = 8 x 1024 = 8192 MB.</strong>)</em></p>
+<p>As for <strong>Processors</strong> you want this to be at 2 and no more. Leave <strong>Enable EFI (special OSes only)</strong> as it is - that is <strong>unchecked</strong> - and click <strong>Next</strong> to continue.</p>
+</div>
+<div class="section" id="step-2-2-3-virtual-hard-disk">
+<h4>Step 2.2.3: Virtual hard disk<a class="headerlink" href="#step-2-2-3-virtual-hard-disk" title="Permalink to this headline">#</a></h4>
+<p><img alt="Don't Pre-allocate Full Size." src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/07_virtual_hard_disk.png" /></p>
+<p>Now, you want to leave all the settings as they are besides the <strong>Disk Size</strong>, we recommend giving the VM <strong>at least 30GB</strong> of space. Reminder that this disk will be created in the folder that you’ve specified on the very first step of the VM creation process but nonetheless, the disk can be moved and resized in the future if needed.</p>
+</div>
+<div class="section" id="step-2-2-4-begin-the-unattended-installation">
+<h4>Step 2.2.4: Begin the unattended installation<a class="headerlink" href="#step-2-2-4-begin-the-unattended-installation" title="Permalink to this headline">#</a></h4>
+<p>Click <strong>Next</strong> to be taken to a <strong>Summary</strong> page, on which you can simply click <strong>Finish</strong> to begin the process of unattended installation. The neat thing about it? It installs the OS and GuestAdditions on its own, without your input! Just let it do its own thing, you will know it is finished when you will see a login screen like this one in the <strong>Preview</strong> section:</p>
+<p><img alt="The Preview section is in the top right of VirtualBox window." src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/08_preview_login.png" /></p>
+<p>Just click the green arrow called <strong>Show</strong> and you’ll be presented with a VM window and the login screen. Log in with the password you’ve set up during the installation process and we’ll have one bit of configuration left to do.</p>
+<p>It is possible that you’ll receive an error like this one after clicking <strong>Finish</strong>:</p>
+<p><img alt="The error shows up on the right side of the VirtualBox window and can be a little differently worded." src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/09_virtualization_error.png" /></p>
+<p>It means you have to <a class="reference external" href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/sect-troubleshooting-enabling_intel_vt_x_and_amd_v_virtualization_hardware_extensions_in_bios">enable virtualization in your computer’s BIOS/UEFI settings</a>. <a class="reference external" href="https://2nwiki.2n.cz/pages/viewpage.action?pageId=75202968">Alternative set of instructions</a>. If you have an AMD CPU, you’re probably looking for something called <code class="docutils literal notranslate"><span class="pre">SVM</span></code> to enable, for Intel CPUs, <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Virtualization</span> <span class="pre">Technology</span></code>. The error should tell you what it is looking for. After you deal with it, just <strong>Start</strong> the machine and let things happen, you’ll know that the process has finished when you see a login screen:</p>
+<p><img alt="You can already make your VM full screen or just maximize the window." src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/10_login_screen.png" /></p>
+</div>
+</div>
+<div class="section" id="step-3-setting-correct-sudo-permissions">
+<h3>Step 3: Setting correct sudo permissions<a class="headerlink" href="#step-3-setting-correct-sudo-permissions" title="Permalink to this headline">#</a></h3>
+<p>Due to how the unattended installation is configured by VirtualBox, your account doesn’t have proper <code class="docutils literal notranslate"><span class="pre">sudo</span></code> permissions. Think of them as the equivalent to <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">as</span> <span class="pre">administrator</span></code> on your Windows machine - you can imagine why it would be important to have them in order.</p>
+<div class="section" id="step-3-1-navigate-to-users-and-group">
+<h4>Step 3.1: Navigate to users and group<a class="headerlink" href="#step-3-1-navigate-to-users-and-group" title="Permalink to this headline">#</a></h4>
+<p>First, click on the <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/00_whisker_icon.png" alt="The blue-white rodent Whisker Menu Icon" style="display: inline; margin: auto;"> in top left of your window, afterwards type in <code class="docutils literal notranslate"><span class="pre">Users</span></code> and you should see <code class="docutils literal notranslate"><span class="pre">Users</span> <span class="pre">and</span> <span class="pre">Groups</span></code> show up. Click on it.</p>
+<p><img alt="It should be the top option you see. It is possible that due to localization it'll be called differently - try using the term in your language then." src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/11_users_and_groups.png" /></p>
+</div>
+<div class="section" id="step-3-2-manage-groups">
+<h4>Step 3.2: Manage groups<a class="headerlink" href="#step-3-2-manage-groups" title="Permalink to this headline">#</a></h4>
+<p>In the window that just came up you want to click on <strong>Manage Groups</strong>, click somewhere on the list and type <code class="docutils literal notranslate"><span class="pre">sudo</span></code> on your keyboard. That should bring you to the <code class="docutils literal notranslate"><span class="pre">sudo</span></code> entry like in the picture:</p>
+<p><img alt="You will find the search functionality like this in many corners of Xubuntu." src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/12_sudo_group.png" /></p>
+</div>
+<div class="section" id="step-3-2-add-yourself-to-sudo">
+<h4>Step 3.2: Add yourself to sudo<a class="headerlink" href="#step-3-2-add-yourself-to-sudo" title="Permalink to this headline">#</a></h4>
+<p>With <code class="docutils literal notranslate"><span class="pre">sudo</span></code> selected, click <strong>Properties</strong> and in the window that shows up tick your user’s name like this:</p>
+<p><img alt="No need to touch anything else." src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/13_sudo_properties.png" /></p>
+<p>And then click <strong>OK</strong>. You will be greeted with a password prompt - it’s the same one you logged in with.</p>
+</div>
+<div class="section" id="step-3-3-reboot-your-vm">
+<h4>Step 3.3: Reboot your VM<a class="headerlink" href="#step-3-3-reboot-your-vm" title="Permalink to this headline">#</a></h4>
+<p>Now that this is all done, you can close those windows and reboot your VM. You can open a <code class="docutils literal notranslate"><span class="pre">Terminal</span></code> window by doing <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd> and type in <code class="docutils literal notranslate"><span class="pre">reboot</span></code> and then press <kbd>Enter</kbd> to execute the command. Alternatively, you can click on the <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/00_whisker_icon.png" alt="The blue-white rodent Whisker Menu Icon" style="display: inline; margin: auto;"> , then click on the power icon in bottom right and pick <strong>Restart</strong>.</p>
+<p><img alt="You might want to take note of other options that you see in this menu." src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/14_logout.png" /></p>
+<p><img alt="Not the most exciting of menus, but take note of the Shut Down option." src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/15_restart.png" /></p>
+</div>
+<div class="section" id="step-3-4-test-your-newly-gained-sudo-privileges">
+<h4>Step 3.4: Test your newly gained sudo privileges<a class="headerlink" href="#step-3-4-test-your-newly-gained-sudo-privileges" title="Permalink to this headline">#</a></h4>
+<p>Now that you have access to <code class="docutils literal notranslate"><span class="pre">sudo</span></code>, we can use this to update our Xubuntu through the <code class="docutils literal notranslate"><span class="pre">Terminal</span></code>. Open the <code class="docutils literal notranslate"><span class="pre">Terminal</span></code> and use these commands, one after another:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</pre></div>
+</div>
+<p>You will be asked for your password after using the first one - type it in and use <kbd>Enter</kbd> to provide your terminal with the password. There is no visual feedback about what you’re typing in but you are indeed doing so.</p>
+<p>After <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span></code> runs for a while you will be asked whether you want to install things - do so to update your machine. If you have any issues, do not hesitate to come over to our <a class="reference external" href="https://discord.gg/V75WSQG">Discord server</a> and ask for help in the <code class="docutils literal notranslate"><span class="pre">#virtualbox-help</span></code> channel.</p>
+</div>
+</div>
+<div class="section" id="step-4-understand-your-new-vm">
+<h3>Step 4: Understand your new VM<a class="headerlink" href="#step-4-understand-your-new-vm" title="Permalink to this headline">#</a></h3>
+<p>Here are some tips to help you get started in a virtual environment:</p>
+<ul class="simple">
+<li><p>Enable the toolbar in your VM settings - there are useful options there that you might want to play around with, especially the ones concerning full screen or multiple displays. To do so, click on <strong>Settings</strong> and then navigate to <strong>User Interface</strong> and finally tick <strong>Show at Top of Screen</strong>.
+<img alt="It's a good idea to look around the settings overall to get a feel of what's possible." src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/16_toolbar.png" /></p></li>
+<li><p>All your work should happen in the VM. You will install everything you need for coding, including your text editor, language environments and various tools inside the VM. The Xubuntu installation inside of your VM also comes with a web browser pre-installed but we’ll be installing Chrome shortly.</p></li>
+<li><p>To install software on your VM, you will follow the Linux (Ubuntu) installation instructions from inside the Xubuntu VM.</p></li>
+<li><p>You might need to take screenshots when asking for help on our Discord, here’s how depending on where you use it:</p>
+<ul>
+<li><p><strong>Inside the VM:</strong> you can use <kbd>Shift</kbd> + <kbd>PrtSrc</kbd> to take screenshots of portion of your screen. Alternatively, you can click the <strong>Whisker Menu</strong> and type in <strong>Screenshot</strong>, in which you can choose to take a screenshot of your entire screen, the current window you are on or to select a certain area to capture.</p></li>
+<li><p><strong>On your host (Windows):</strong> you can use a shortcut of the Host Key (<kbd>Right Ctrl</kbd> + <kbd>E</kbd>) or click <strong>View -&gt; Take Screenshot</strong> for a full screenshot. A different way would be unfocusing your VM window by clicking outside of it and then using the regular Windows shortcut of <kbd>Windows key</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> to take screenshots of portion of your screen.</p></li>
+</ul>
+</li>
+<li><p><strong>Remember:</strong> all of the development that you’ll do related to TOP should be done in the VM.</p></li>
+<li><p>We recommend going full screen (<strong>View -&gt; Full-screen Mode</strong>) and forgetting about your host OS (Windows). For best performance, close all programs inside of your host OS when running your VM.</p></li>
+<li><p>If you added additional monitors in the <strong>Display</strong> tab of your VM settings, with the VM running, clicking <strong>View -&gt; Virtual Screen 2 -&gt; Enable</strong>. You can run fullscreen with multiple monitors, but it may ask for more <strong>Video Memory</strong>, which you should have increased when adding more monitors. <strong>Make sure you enable your Virtual Screens in windowed mode before going fullscreen, otherwise they won’t work.</strong> Upon exiting fullscreen, your secondary display may close. You can reopen it with these instructions.</p></li>
+</ul>
+<div class="section" id="frequent-issues-questions">
+<h4>Frequent issues/questions:<a class="headerlink" href="#frequent-issues-questions" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>If upon trying to start the VM you only get a black screen, close and <code class="docutils literal notranslate"><span class="pre">power</span> <span class="pre">off</span></code> the VM, click <strong>Settings -&gt; Display</strong> and make sure <strong>Enable 3D Acceleration</strong> is UNCHECKED, and Video memory is set to <strong>AT LEAST 128MB</strong>.</p></li>
+<li><p>Running out of space? Look at <a class="reference external" href="https://discord.com/channels/505093832157691914/690588860085960734/1015965403572351047">these instructions on our Discord</a>.</p></li>
+<li><p>Are you using a touchscreen? <a class="reference external" href="https://www.youtube.com/watch?v=hW-iyHHoDy4">Here’s a video</a> on how to enable touchscreen controls for VirtualBox.</p></li>
+<li><p><strong>VM performance tips</strong>:</p>
+<ul>
+<li><p>When running the VM, minimize your Windows activity. You probably want to be plugged into power as well if you’re using a laptop.</p></li>
+<li><p>Make sure your processors are set to only 2 and the Memory you’ve given your VM is at most half of your total RAM but at least 2GB. If you can’t spare the 2GB, dual boot.</p></li>
+<li><p>If videos lag in the VM, make sure to max out Video Memory to whatever you can or alternatively play them on your Windows if your machine can handle it. Disable 3D Acceleration if you have it enabled.</p></li>
+<li><p>Do look out for the <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/17_turtle.png" alt="Icon with a green turtle and a V" style="display: inline; margin: auto;"> icon in bottom right of your VM window, if you have it, here’s a <a class="reference external" href="https://forums.virtualbox.org/viewtopic.php?f=25&amp;t=99390">VirtualBox forum thread on how to get rid of it</a>. You want to have the <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/18_vboxV.png" alt="Icon of a chip with a V" style="display: inline; margin: auto;"> icon instead. If you don’t see a <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/17_turtle.png" alt="Icon with a green turtle and a V" style="display: inline; margin: auto;"> or a <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/18_vboxV.png" alt="Icon of a chip with a V" style="display: inline; margin: auto;"> in bottom right, you have to exit full screen mode to see them.</p></li>
+</ul>
+</li>
+<li><p>If your performance is still lacking, go for a dual boot as this will make sure you’re using all of your specs for one OS only, thus improving your experience significantly.</p></li>
+<li><p>If your scroll wheel behaves oddly in Google Chrome and you have gone through VM performance tips to make sure your VM is working as intended, look into <code class="docutils literal notranslate"><span class="pre">imwheel</span></code>: <a class="reference external" href="https://askubuntu.com/a/621140">see these AskUbuntu instructions for more information</a>. If you have VSCode installed, use that instead of <code class="docutils literal notranslate"><span class="pre">gedit</span></code>, otherwise install it with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">gedit</span></code> - if you install it with <code class="docutils literal notranslate"><span class="pre">snap</span></code>, it won’t let you save the file. To make sure <code class="docutils literal notranslate"><span class="pre">imwheel</span></code> works every startup, you need to click the whisker <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/00_whisker_icon.png" alt="The blue-white rodent Whisker Menu Icon" style="display: inline; margin: auto;"> , type <code class="docutils literal notranslate"><span class="pre">Session</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Session</span> <span class="pre">and</span> <span class="pre">Startup</span></code> that shows up, go to <code class="docutils literal notranslate"><span class="pre">Application</span> <span class="pre">Autostart</span></code>, click <code class="docutils literal notranslate"><span class="pre">Add</span></code> and put it <code class="docutils literal notranslate"><span class="pre">imwheel</span></code> for <code class="docutils literal notranslate"><span class="pre">Name</span></code> and <code class="docutils literal notranslate"><span class="pre">imwheel</span> <span class="pre">-b</span> <span class="pre">&quot;4</span> <span class="pre">5</span></code> for <code class="docutils literal notranslate"><span class="pre">Command</span></code>. Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> and you should be all set.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="step-5-safely-shutting-down-your-vm">
+<h3>Step 5: Safely shutting down your VM<a class="headerlink" href="#step-5-safely-shutting-down-your-vm" title="Permalink to this headline">#</a></h3>
+<p>You don’t pull the plug on your everyday use computer, right? Why would you do the same to your virtual computer? When you click the X button and just close out your VM, you might as well say goodbye to your files. In this section, you’ll understand three ways you can shut off your VM.</p>
+<div class="section" id="option-1-shutting-down-from-inside-the-vm-with-ui">
+<h4>Option 1 - Shutting down from inside the VM with UI<a class="headerlink" href="#option-1-shutting-down-from-inside-the-vm-with-ui" title="Permalink to this headline">#</a></h4>
+<p>Clicking on the <strong>Whisker Menu</strong> <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/00_whisker_icon.png" alt="The blue-white rodent Whisker Menu Icon" style="display: inline; margin: auto;"> and clicking the power icon will give you several options on how to modify your session, including <strong>Shutting Down</strong>. Yep, that’s the same place you might’ve used to <strong>Restart</strong> before!</p>
+</div>
+<div class="section" id="option-2-shutting-down-from-inside-the-vm-with-the-terminal">
+<h4>Option 2 - Shutting down from inside the VM with the terminal<a class="headerlink" href="#option-2-shutting-down-from-inside-the-vm-with-the-terminal" title="Permalink to this headline">#</a></h4>
+<p>Simply enough, typing <code class="docutils literal notranslate"><span class="pre">poweroff</span></code> will do in this case. Your system will immediately shutdown.</p>
+</div>
+<div class="section" id="option-3-shutting-down-from-outside-the-vm">
+<h4>Option 3 - Shutting down from outside the VM<a class="headerlink" href="#option-3-shutting-down-from-outside-the-vm" title="Permalink to this headline">#</a></h4>
+<p>The last way to accomplish this goal of safely shutting down is by using the VM interface. Clicking on the File tab and hitting the close button (which also has a Power Icon) will bring up a popup titled <strong>Close Virtual Machine</strong>. This popup asks if you want to <strong>Save the machine state</strong>, <strong>Send the shutdown signal</strong>, or <strong>Power off the machine</strong>.</p>
+<p><img alt="VM File Menu" src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/19_vbox_close.png" /></p>
+<p><img alt="Close Virtual Machine Menu" src="https://cdn.statically.io/gh/TheOdinProject/curriculum/96d534641514fe4d62aabe2919fac3c52cb286e7/foundations/installations/installations/imgs/20_send_shutdown.png" /></p>
+<p>To be safe, click the <strong>Send the shutdown signal</strong> radio and hit OK. This will safely power down your VM and your files will not get corrupted.</p>
+</div>
+</div>
+</div>
+<div class="section" id="kali-linux-overview">
+<h2>Kali Linux overview<a class="headerlink" href="#kali-linux-overview" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="navigating-file-systems">
+<h2>Navigating file systems<a class="headerlink" href="#navigating-file-systems" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="users-and-priveleges">
+<h2>Users and Priveleges<a class="headerlink" href="#users-and-priveleges" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="common-network-commands">
+<h2>Common Network Commands<a class="headerlink" href="#common-network-commands" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="viewing-creating-and-editing-files">
+<h2>Viewing, Creating, and Editing Files<a class="headerlink" href="#viewing-creating-and-editing-files" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="starting-and-stopping-services">
+<h2>Starting and Stopping Services<a class="headerlink" href="#starting-and-stopping-services" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="installing-and-updating-tools">
+<h2>Installing and Updating Tools<a class="headerlink" href="#installing-and-updating-tools" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="scripting-with-bash">
+<h2>Scripting with Bash<a class="headerlink" href="#scripting-with-bash" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome!</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installations">Installations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-download-virtualbox-and-kali-linux">Step 1: Download VirtualBox and Kali Linux</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#important">IMPORTANT</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-1-download-virtualbox">Step 1.1: Download VirtualBox</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-2-download-kali-linux">Step 1.2: Download Kali Linux</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-install-virtualbox-and-set-up-xubuntu">Step 2: Install VirtualBox and set up Xubuntu</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-1-install-virtualbox">Step 2.1: Install VirtualBox</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-2-prepare-virtualbox-for-xubuntu">Step 2.2: Prepare VirtualBox for Xubuntu</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-2-1-unattended-guest-os-install-setup">Step 2.2.1: Unattended guest OS install setup</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-2-2-hardware">Step 2.2.2: Hardware</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-2-3-virtual-hard-disk">Step 2.2.3: Virtual hard disk</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-2-4-begin-the-unattended-installation">Step 2.2.4: Begin the unattended installation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-setting-correct-sudo-permissions">Step 3: Setting correct sudo permissions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-1-navigate-to-users-and-group">Step 3.1: Navigate to users and group</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-2-manage-groups">Step 3.2: Manage groups</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-2-add-yourself-to-sudo">Step 3.2: Add yourself to sudo</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-3-reboot-your-vm">Step 3.3: Reboot your VM</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-4-test-your-newly-gained-sudo-privileges">Step 3.4: Test your newly gained sudo privileges</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-understand-your-new-vm">Step 4: Understand your new VM</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#frequent-issues-questions">Frequent issues/questions:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-safely-shutting-down-your-vm">Step 5: Safely shutting down your VM</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-shutting-down-from-inside-the-vm-with-ui">Option 1 - Shutting down from inside the VM with UI</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-shutting-down-from-inside-the-vm-with-the-terminal">Option 2 - Shutting down from inside the VM with the terminal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#option-3-shutting-down-from-outside-the-vm">Option 3 - Shutting down from outside the VM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kali-linux-overview">Kali Linux overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-file-systems">Navigating file systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users-and-priveleges">Users and Priveleges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-network-commands">Common Network Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-creating-and-editing-files">Viewing, Creating, and Editing Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-stopping-services">Starting and Stopping Services</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-updating-tools">Installing and Updating Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting-with-bash">Scripting with Bash</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Iddo Sadeh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

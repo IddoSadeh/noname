@@ -1,0 +1,723 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kali Linux &#8212; My Commonplace Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Operating Systems/kali';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Installations" href="install.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Commonplace Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Operating Systems</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="start.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Kali Linux</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/IddoSadeh/noname" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/IddoSadeh/noname/issues/new?title=Issue%20on%20page%20%2FOperating Systems/kali.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Operating Systems/kali.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Kali Linux</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-terminal">The Terminal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-the-file-system">Navigating the File system</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-1">Excercise 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-2">Excercise 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excericse-3">Excericse 3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users-and-priveleges">Users and Priveleges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-network-commands">Common Network Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-creating-and-editing-files">Viewing, Creating, and Editing Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-stopping-services">Starting and Stopping Services</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-updating-tools">Installing and Updating Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting-with-bash">Scripting with Bash</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="kali-linux">
+<h1>Kali Linux<a class="headerlink" href="#kali-linux" title="Permalink to this headline">#</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<p>As with any operating you will see some familiar things on Kali.</p>
+<p>Your screen should look like this:
+<img alt="Alt text" src="../_images/home.png" /></p>
+<p>The top bar has useful icons you may need in the future, from left to right these are:</p>
+<ul class="simple">
+<li><p>Application finder</p></li>
+<li><p>Minimize all windows</p></li>
+<li><p>File explorer</p></li>
+<li><p>Notepad</p></li>
+<li><p>Firefox (web browser)</p></li>
+<li><p>Terminal</p></li>
+<li><p>Tabs 1, 2, 3, 4</p></li>
+<li><p>CPU usage stats</p></li>
+<li><p>Internet status</p></li>
+<li><p>Volume</p></li>
+<li><p>Notifications</p></li>
+<li><p>Battery status</p></li>
+<li><p>Time</p></li>
+<li><p>Lock screen</p></li>
+<li><p>Power button</p></li>
+</ul>
+</div>
+<div class="section" id="the-terminal">
+<h2>The Terminal<a class="headerlink" href="#the-terminal" title="Permalink to this headline">#</a></h2>
+<p>We will be living in the terminal when using linux.</p>
+<p>The terminal can be accessed in the top left of your screen (circled in red):
+<img alt="Alt text" src="../_images/terminal.png" /></p>
+<p>The most commands we will use to start at:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Use</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pwd</p></td>
+<td><p>see the file you are at</p></td>
+<td><p><em>present working directroy</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>cd</p></td>
+<td><p>change file</p></td>
+<td><p><em>change directory</em></p></td>
+</tr>
+<tr class="row-even"><td><p>ls</p></td>
+<td><p>listing files and folder in the foler you are at</p></td>
+<td><p><em>listings</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>mkdir</p></td>
+<td><p>make a new directory</p></td>
+<td><p><em>make directory</em></p></td>
+</tr>
+<tr class="row-even"><td><p>rmdir</p></td>
+<td><p>delete an existing directory</p></td>
+<td><p><em>remove directroy</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>echo</p></td>
+<td><p>display text</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>cp</p></td>
+<td><p>copy a file or directory</p></td>
+<td><p><em>copy</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>rm</p></td>
+<td><p>remove a file or directory</p></td>
+<td><p><em>remove</em></p></td>
+</tr>
+<tr class="row-even"><td><p>mv</p></td>
+<td><p>move a file or directory</p></td>
+<td><p><em>move</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>locate</p></td>
+<td><p>locate a file or directory</p></td>
+<td><p><em>locate</em></p></td>
+</tr>
+<tr class="row-even"><td><p>updatedb</p></td>
+<td><p>update the database that keeps track of files and directories</p></td>
+<td><p><em>update database</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>passwd</p></td>
+<td><p>change your password</p></td>
+<td><p><em>password</em></p></td>
+</tr>
+<tr class="row-even"><td><p>man</p></td>
+<td><p>see the documentaiton foor a given command</p></td>
+<td><p><em>manuscript</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="navigating-the-file-system">
+<h2>Navigating the File system<a class="headerlink" href="#navigating-the-file-system" title="Permalink to this headline">#</a></h2>
+<div class="section" id="excercise-1">
+<h3>Excercise 1<a class="headerlink" href="#excercise-1" title="Permalink to this headline">#</a></h3>
+<p>The goal of this excercise it familirize yourself with common terminal commands. You will learn to use <code>cd</code>, <code>pwd</code>, <code>ls</code>, and <code>sudo</code>. You will also get familiar with the basic file structure of your system.</p>
+<p>Open your terminal and do the following:</p>
+<ol class="arabic">
+<li><p>type <code>pwd</code> and hit <em>enter</em></p>
+<p>This will show you where we are at the computer.</p>
+</li>
+<li><p>type <code>cd ..</code> and hit <em>enter</em></p>
+<p>This will go backwards in the file system.</p>
+</li>
+<li><p>type <code>pwd</code> and hit <em>enter</em></p>
+<p>This will let you see where you are now.</p>
+</li>
+<li><p>repeat steps 2 and 3, until you see a <code>/<code>:</p>
+<p>The forward slash is is your base folder.</p>
+</li>
+<li><p>type <code>ls</code> and hit <em>enter</em>:</p>
+<p>This allows you to see what folders and files you can access from the current folder</p>
+</li>
+<li><p>type <code>cd root</code> and hit <em>enter</em></p>
+<p>You may see an error “cd: permission denied: root”. This is because you are not the administrator. In this case do the following:</p>
+<ol class="arabic simple">
+<li><p>type <code>sudo -s</code> and hit <em>enter</em>: this will prompt you for the administrator password. If you haven’t changed it, it should still be <em>kali</em>.</p></li>
+<li><p>type in the password. you wont see the password, but it is being typed. Hit <em>enter</em> when you are done.</p></li>
+</ol>
+</li>
+<li><p>type <code>pwd</code> and hit <em>enter</em>.</p></li>
+<li><p>If you are not in the <code>/</code> directory, navigate to it.</p></li>
+<li><p>type <code>cd root</code> and hit <em>enter</em></p></li>
+</ol>
+<p>At this point your terminal should look something like this:
+<img alt="Alt text" src="../_images/ex1a.png" /></p>
+<p><em>note: from now own, enter after you are instructed to type something.</em></p>
+<ol class="arabic" start="9">
+<li><p>Now that your are in the root type <code>clear<code> to clear the terminal.</p></li>
+<li><p>Type <code>ls</code> to see what files are available: you will see nothing is availble.</p></li>
+<li><p>Navigate to the home folder by typing <code>cd /home/<code>.</p></li>
+<li><p>Navigate to the Kali folder by typing <code>cd kali<code>.</p></li>
+<li><p>Type <code>ls</code></p></li>
+<li><p>Navigate to the Desktop folder (note this is case sensitive - type <em>Desktop</em> not <em>desktop</em>).</p></li>
+<li><p>Now type <code>ls /</code></p>
+<p>This will allow you will to see all the files in the base folder.</p>
+</li>
+<li><p>Type <code>pwd</code></p></li>
+<li><p>Type <code>ls</code></p>
+<p>This may be empty as your desktop folders may be empty.</p>
+</li>
+<li><p>At this point we are in the Desktop folder, but what if we wanted to access a folder that is not nexted underneath the Dekstop?</p>
+<p>Say you wanted to access <code>/etc/</code> type: <code>cd /etc/</code></p>
+</li>
+<li><p>Now say we want to go back to Desktop? Type:  <code>cd /home/kali/Desktop</code></p></li>
+<li><p>We can also see what exists in another folder with out accessing:</p>
+<p>Type <code>ls /home/</code> to see what is in the home directory.</p>
+</li>
+<li><p>Now make sure you are in the Desktop. What if we wanted to create a new folder? Type <code>mkdir name</code>. Type <code>ls</code> to see it was created.</p></li>
+<li><p>Lets delete the new folder. Type <code>rmdir name</code>.</p></li>
+</ol>
+</div>
+<div class="section" id="excercise-2">
+<h3>Excercise 2<a class="headerlink" href="#excercise-2" title="Permalink to this headline">#</a></h3>
+<p>The goal of this excercise it familirize yourself with some more common terminal commands. You will learn to use <code>echo</code>, <code>cp</code>, <code>rm</code>, <code>mv</code>, and <code>locate</code>. You will also get familiar with the use of arrows to navigate to previous commands.</p>
+<ol class="arabic">
+<li><p>Navigate back to the base folder.</p></li>
+<li><p>Navigate to the root. Try to see what files exist. Now type <code>ls -la</code>. You’ll see a lot more files that didnt exist before. These are hidden files.</p>
+<p><img alt="Alt text" src="../_images/hidden.png" /></p>
+</li>
+<li><p>Navigate to your Desktop.</p></li>
+<li><p>Type <code>echo “hello world”</code></p>
+<p>This is like a Python print statement</p>
+</li>
+<li><p>Hit the up arrow on your keyboard. The previous comman should show up. Complete it look like: <code>echo “hello world” &gt; hello.txt</code> and hit enter.</p>
+<p>This will print the words to a new document called <em>hello.txt</em>. Feel free to go to your desktop, and find the new document. Or type <code>ls</code> to see it got created.</p>
+</li>
+<li><p>What if we want to move copy the file to a nother location? Type <code>cp hello.txt /home/kali</code>. Navigate to <code>kali</code> and see how it moved a folder.</p>
+<p><img alt="Alt text" src="../_images/copy.png" /></p>
+</li>
+<li><p>What if we want to delete the file? <code>rm hello.txt</code>. Notice it only deletes it in the directory you are working on.</p></li>
+</ol>
+<p>At this point my terminal looks like these:
+<img alt="Alt text" src="../_images/remove.png" /></p>
+<p>Notice that <code>hello.txt</code> exists in the <code>kali</code> directory but not the <code>Desktop</code> directoy.</p>
+<ol class="arabic" start="8">
+<li><p>Move the text file to a different directoy <code>mv hello.txt Downloads/</code></p>
+<p><img alt="Alt text" src="../_images/move.png" /></p>
+</li>
+<li><p>Navigate back to the base folder. Now what if we wanted to find our text file? Type <code>locate</code>.</p>
+<p>If you get a message of the form <code>plocate: no pattern to search specified</code>, you should be good to go to the next step. If you get a message of the form <code>locate command not found</code> Run:
+<code>sudo apt update</code>
+<code>sudo apt install mlocate</code></p>
+</li>
+<li><p>Once in the base folder type <code>locate hello.txt</code> to find the directoryt in which this file exists.</p>
+<p>If you get a message of the form <code> No such file or directroy</code>, run <code>sudo updatedb</code> so kali can locate it in the future.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="excericse-3">
+<h3>Excericse 3<a class="headerlink" href="#excericse-3" title="Permalink to this headline">#</a></h3>
+<p>The goal of this excercise it familirize yourself with a few more common terminal commands. You will learn to set your password, and use the <code>man</code> command.</p>
+<ol class="arabic">
+<li><p>Right now we are using the default password, thats not very secure. You can update your password as following:</p>
+<p><img alt="Alt text" src="../_images/passwd.png" /></p>
+<p><em>Remember, passwords wont show up as being typed, but the terminal will read them.</em></p>
+</li>
+<li><p>One more useful thing for using the command line, is to use the <code>man</code> command to learn some more about a commnad you are using. Try typing <code>man ls</code> to see how this command works.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="users-and-priveleges">
+<h2>Users and Priveleges<a class="headerlink" href="#users-and-priveleges" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="common-network-commands">
+<h2>Common Network Commands<a class="headerlink" href="#common-network-commands" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="viewing-creating-and-editing-files">
+<h2>Viewing, Creating, and Editing Files<a class="headerlink" href="#viewing-creating-and-editing-files" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="starting-and-stopping-services">
+<h2>Starting and Stopping Services<a class="headerlink" href="#starting-and-stopping-services" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="installing-and-updating-tools">
+<h2>Installing and Updating Tools<a class="headerlink" href="#installing-and-updating-tools" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="scripting-with-bash">
+<h2>Scripting with Bash<a class="headerlink" href="#scripting-with-bash" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Operating Systems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="install.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Installations</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-terminal">The Terminal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-the-file-system">Navigating the File system</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-1">Excercise 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-2">Excercise 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excericse-3">Excericse 3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#users-and-priveleges">Users and Priveleges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-network-commands">Common Network Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-creating-and-editing-files">Viewing, Creating, and Editing Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-stopping-services">Starting and Stopping Services</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-updating-tools">Installing and Updating Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting-with-bash">Scripting with Bash</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Iddo Sadeh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
