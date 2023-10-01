@@ -1,9 +1,10 @@
 Not sure what to name this one or what it will cover entirely.
 
 For now the opening chapters will be about linux and hacking and adapted from
-https://www.youtube.com/watch?v=lZAoFs75_cs
-https://www.youtube.com/watch?v=3FNYvj2U0HM
-https://www.youtube.com/watch?v=ElWo5fd4rIU&list=PLYmlEoSHldN7HJapyiQ8kFLUsk_a7EjCw
+- https://www.youtube.com/watch?v=lZAoFs75_cs
+- https://www.youtube.com/watch?v=3FNYvj2U0HM
+- https://www.youtube.com/watch?v=ElWo5fd4rIU&list=PLYmlEoSHldN7HJapyiQ8kFLUsk_a7EjCw
+
 # Tech
 
 ## Environemnt
@@ -50,7 +51,12 @@ https://jupyterbook.org/en/stable/start/publish.html
 
 -  every time i make changes, do the following:
 
-To update your online book, make changes to your book’s content on the main branch of your repository, re-build your book with <code>jupyter-book build name/</code> and then use <code>ghp-import -n -p -f name/_build/html</code> as before to push the newly built HTML to the <code>gh-pages</code> branch.
+To update your online book, make changes to your book’s content on the main branch of your repository, re-build your book with 
+ <code>jupyter-book build name/</code>
+and then use 
+ <code>ghp-import -n -p -f name/_build/html</code>
+to push the newly built HTML to the 
+<code>gh-pages</code> branch.
 
 ## Publishing the website
 

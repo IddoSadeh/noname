@@ -4,4 +4,4 @@
 format: jb-book
 root: intro
 chapters:
-- file: name\start.md
+- file: name/start.md
