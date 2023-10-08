@@ -11,6 +11,8 @@ Follow the following steps to do so:
 
 *Note: These steps have been adapted from [The Odin Project](https://www.theodinproject.com/lessons/foundations-installations). However, we make some important changes in this tutorial, so please follow along here.*
 
+*Note 2: These steps do not work for Mac devices the have the new Apple silicone chips. If you own a device with a Apple silicone chip, follow the instructions in the following [Youtube video](https://www.youtube.com/watch?v=U09soewiu18).*
+
 ## Step 1: Download VirtualBox and Kali Linux
 
 Installing a VM is a simple process. This guide uses Oracle's VirtualBox program to create and run the VM. This program is open-source, free, and simple. What more can you ask for? Now, let's make sure we have everything downloaded and ready for installation.

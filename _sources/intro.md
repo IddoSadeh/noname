@@ -1,4 +1,4 @@
-Note: This textbook is a work in progress. last update September 30th, 2023.
+Note: This textbook is a work in progress. last update October 7th, 2023.
 
 # Welcome!
 
