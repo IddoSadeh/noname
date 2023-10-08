@@ -9,4 +9,6 @@ parts:
   - file: Operating Systems/start.md
   - file: Operating Systems/install.md
   - file: Operating Systems/kali.md
+  - file: Operating Systems/terminal.md
+  - file: Operating Systems/priv.md
 

@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kali Linux &#8212; My Commonplace Book</title>
+    <title>Users and Priveleges &#8212; My Commonplace Book</title>
   
   
   
@@ -59,10 +59,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Operating Systems/kali';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Operating Systems/priv';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Installations" href="install.html" />
+    <link rel="prev" title="Terminal Basics" href="terminal.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -151,7 +151,9 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="start.html">Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installations</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Kali Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kali.html">Kali Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal Basics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Users and Priveleges</a></li>
 </ul>
 
     </div>
@@ -223,7 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/IddoSadeh/noname/issues/new?title=Issue%20on%20page%20%2FOperating Systems/kali.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/IddoSadeh/noname/issues/new?title=Issue%20on%20page%20%2FOperating Systems/priv.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -253,7 +255,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Operating Systems/kali.md" target="_blank"
+      <li><a href="../_sources/Operating Systems/priv.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -335,7 +337,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Kali Linux</h1>
+    <h1>Users and Priveleges</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -345,12 +347,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-network-commands">Common Network Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-creating-and-editing-files">Viewing, Creating, and Editing Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-stopping-services">Starting and Stopping Services</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-updating-tools">Installing and Updating Tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting-with-bash">Scripting with Bash</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-write-access">Read-Write access</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-access">Changing access</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-user">Add user</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#switch-user">Switch user</a></li>
 </ul>
             </nav>
         </div>
@@ -362,47 +362,97 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="kali-linux">
-<h1>Kali Linux<a class="headerlink" href="#kali-linux" title="Permalink to this headline">#</a></h1>
-<p><em>Note: the next few chapters will work with any version of Linux, this chapter quickly introduces Kali UI.</em>*</p>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
-<p>As with any operating you will see some familiar things on Kali.</p>
-<p>Your screen should look like this:
-<img alt="Alt text" src="../_images/home.png" /></p>
-<p>The top bar has useful icons you may need in the future, from left to right these are:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="users-and-priveleges">
+<h1>Users and Priveleges<a class="headerlink" href="#users-and-priveleges" title="Permalink to this headline">#</a></h1>
+<p>In this chapter we will talk about users and privalleges.</p>
+<p>The new commands we will introduce are:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Use</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>chmod</p></td>
+<td><p>change permissions on a file or directory</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>adduser</p></td>
+<td><p>add user to your OS</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>su</p></td>
+<td><p>switch user</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>sudo</p></td>
+<td><p>allows you to elevate privellages</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>We will also cover the following files:</p>
 <ul class="simple">
-<li><p>Application finder</p></li>
-<li><p>Minimize all windows</p></li>
-<li><p>File explorer</p></li>
-<li><p>Notepad</p></li>
-<li><p>Firefox (web browser)</p></li>
-<li><p>Terminal</p></li>
-<li><p>Tabs 1, 2, 3, 4</p></li>
-<li><p>CPU usage stats</p></li>
-<li><p>Internet status</p></li>
-<li><p>Volume</p></li>
-<li><p>Notifications</p></li>
-<li><p>Battery status</p></li>
-<li><p>Time</p></li>
-<li><p>Lock screen</p></li>
-<li><p>Power button</p></li>
+<li><p>/etc/cpasswd</p></li>
+<li><p>/et/cshadow</p></li>
+</ul>
+<div class="section" id="read-write-access">
+<h2>Read-Write access<a class="headerlink" href="#read-write-access" title="Permalink to this headline">#</a></h2>
+<p>Before we dive in to the new commands, lets go back to the <code>ls -la</code> command from the previous lesson.</p>
+<p>If you run the command on your root, you should see something like this:</p>
+<p><img alt="Alt text" src="../_images/lsla.png" /></p>
+<p>When looking at the left most column we see 10 letter strings with a combination of of charcters <code>d</code>,<code>r</code>,<code>w</code>,<code>x</code>, and <code>-</code>. These letter combinations actually have meaning and will tell us a lot about that line print.</p>
+<p>If you take a deeper look you will notice that the first character is always either a “<code>d</code>” or a “<code>-</code>”. These characters indicate the type of “thing” we are looking at:</p>
+<ul class="simple">
+<li><p><code>d</code> is short for directory (folder).</p></li>
+<li><p><code>-</code> indicates a file.</p></li>
+</ul>
+<p>The next 9 characters are a mix of <code>r</code>,<code>w</code>,<code>x</code>, and <code>-</code>. Here they indicate, in sets of three ordered as <code>r</code>,<code>w</code>,<code>x</code> with <code>-</code> occasionaly replacing one of the letters, what type of access the following users have (from left to right):</p>
+<ul class="simple">
+<li><p>Owner of the file.</p></li>
+<li><p>A Group of owners of the file.</p></li>
+<li><p>All other users.</p></li>
+</ul>
+<p>Where the letters indicate the following permissions:</p>
+<ul class="simple">
+<li><p><code>r</code> is short for read privelages.</p></li>
+<li><p><code>w</code> is short for write privelages.</p></li>
+<li><p><code>x</code> is short for execute privelages.</p></li>
+<li><p><code>-</code> is when there are no privelages.</p></li>
+</ul>
+<p>This is important as it will allows us later on to identify vulnerable files which can be written and excuted without special privelages.</p>
+</div>
+<div class="section" id="changing-access">
+<h2>Changing access<a class="headerlink" href="#changing-access" title="Permalink to this headline">#</a></h2>
+<p>How do you change access to a file?</p>
+<p>Well first lets run the following command:</p>
+<p><code>echo “hello world” &gt; hello.txt </code></p>
+<p>As you can see, when we do this the file does not have many privelages:</p>
+<p><img alt="Alt text" src="../_images/priv2.png" /></p>
+<p>If we want to change the priveleges, you can use the <code>chmod</code> command. Here are two ways:</p>
+<ul class="simple">
+<li><p>add specific privellage with <code>chmode +c filename</code>, where c is the privelage you want to add.<img alt="Alt text" src="../_images/chmod1.png" /></p></li>
+<li><p>add all privelages to all users with <code>chmod 777</code>.</p></li>
 </ul>
 </div>
-<div class="section" id="common-network-commands">
-<h2>Common Network Commands<a class="headerlink" href="#common-network-commands" title="Permalink to this headline">#</a></h2>
+<div class="section" id="add-user">
+<h2>Add user<a class="headerlink" href="#add-user" title="Permalink to this headline">#</a></h2>
+<p>Another thing you may want to learn how to do is add a user to your OS. We can do this with the <code>adduser</code> command:</p>
+<p><img alt="Alt text" src="../_images/adduser1.png" /></p>
+<p>Lets confirm John exists by printing out the content of <code>/etc/passwd</code>, a file that used to have all the passwords for a given system, but now only has previews of the users:</p>
+<p><img alt="Alt text" src="../_images/adduser2.png" /></p>
+<p>The file that stores actual passwords is <code>/etc/shadow</code>:
+<img alt="Alt text" src="../_images/adduser3.png" /></p>
+<p>However, as you can see, it doesn’t show the real password. It shows a hashcode the represents the passowrd - this can be reverse engineering to produce the real password.</p>
 </div>
-<div class="section" id="viewing-creating-and-editing-files">
-<h2>Viewing, Creating, and Editing Files<a class="headerlink" href="#viewing-creating-and-editing-files" title="Permalink to this headline">#</a></h2>
-</div>
-<div class="section" id="starting-and-stopping-services">
-<h2>Starting and Stopping Services<a class="headerlink" href="#starting-and-stopping-services" title="Permalink to this headline">#</a></h2>
-</div>
-<div class="section" id="installing-and-updating-tools">
-<h2>Installing and Updating Tools<a class="headerlink" href="#installing-and-updating-tools" title="Permalink to this headline">#</a></h2>
-</div>
-<div class="section" id="scripting-with-bash">
-<h2>Scripting with Bash<a class="headerlink" href="#scripting-with-bash" title="Permalink to this headline">#</a></h2>
+<div class="section" id="switch-user">
+<h2>Switch user<a class="headerlink" href="#switch-user" title="Permalink to this headline">#</a></h2>
+<p>We can switch between users with the <code>su</code> command:</p>
+<p><img alt="Alt text" src="../_images/su.png" /></p>
+<p>You may notice that when we tried switching to root we are prompted for a password, however when we switch to john we were not. This is because john doesnt have “sudo” permission. A user who has “sudo” permissions will be in a sudoers file. Anybody in that file has full access to the computers file. We can see this difference if we try to change a users password from a different user:</p>
+<p><img alt="Alt text" src="../_images/sudo1.png" />
+<img alt="Alt text" src="../_images/sudo2.png" /></p>
 </div>
 </div>
 
@@ -438,12 +488,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="install.html"
+       href="terminal.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installations</p>
+        <p class="prev-next-title">Terminal Basics</p>
       </div>
     </a>
 </div></div>
@@ -464,12 +514,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-network-commands">Common Network Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-creating-and-editing-files">Viewing, Creating, and Editing Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-stopping-services">Starting and Stopping Services</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-updating-tools">Installing and Updating Tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting-with-bash">Scripting with Bash</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-write-access">Read-Write access</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-access">Changing access</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-user">Add user</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#switch-user">Switch user</a></li>
 </ul>
   </nav></div>
 
