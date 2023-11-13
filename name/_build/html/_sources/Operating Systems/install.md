@@ -28,7 +28,7 @@ Head over to the official kali download page for [virtual machines](https://www.
 
 You will see icons for downloading Kali images for differnet virtual machines, since we are using VirtualBox click on the icon circled in red:
 
-![Alt text](kali_install.png)
+![Alt text](images/kali_install.png)
 
 ## Step 2: Install VirtualBox and set up Xubuntu
 
@@ -80,13 +80,13 @@ If you are sturggling with the installations, you can follow the [offiical docum
 
 Once the operating systems finishes setting up, you should see a prompt for login information:
 
-![Alt text](login.png)
+![Alt text](images/login.png)
 
 The default username and password are both **kali**.
 
 Feel free to now enter full screen mode by pressing the view drop down menu and choosing Full-screen.
 
-![Alt text](<view.png>)
+![Alt text](images/<view.png>)
 
 To exist full screen mode, click the Host key + f.
 The Host key is pre defined to be the **right* Ctrl key on your keyboard.
@@ -102,7 +102,7 @@ Clicking the power icon will give you several options on how to modify your sess
 
 The power icon is in the top right of your screen (circled in red):
 
-![Alt text](power.png)
+![Alt text](images/power.png)
 
 
 ### Option 2 - Shutting down from inside the VM with the terminal

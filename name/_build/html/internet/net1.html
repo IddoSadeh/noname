@@ -1,0 +1,609 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet and Network Commands &#8212; My Commonplace Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Internet/net1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bash Scripting Basics" href="../Bash/basics.html" />
+    <link rel="prev" title="The Internet" href="internet1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Commonplace Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Operating Systems</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/start.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/install.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/kali.html">Kali Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/terminal.html">Terminal Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/priv.html">Users and Priveleges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/tools.html">Installing and Updating Tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Internet</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="internet1.html">The Internet</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Internet and Network Commands</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bash</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Bash/basics.html">Bash Scripting Basics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/IddoSadeh/noname" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/IddoSadeh/noname/issues/new?title=Issue%20on%20page%20%2FInternet/net1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Internet/net1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Internet and Network Commands</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">Commands</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ip"><code class="docutils literal notranslate"><span class="pre">ip</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ping"><code class="docutils literal notranslate"><span class="pre">ping</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#traceroute"><code class="docutils literal notranslate"><span class="pre">traceroute</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="internet-and-network-commands">
+<h1>Internet and Network Commands<a class="headerlink" href="#internet-and-network-commands" title="Permalink to this headline">#</a></h1>
+<p>The internet is a network of connected computers. In this section we will talk about basic internet and networking commands.</p>
+<p>The goal of learning these commands is first and foremost to try and understand the internet better by looking at our own systems configuration.</p>
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">#</a></h2>
+<p>I provide basic information of each command shown.</p>
+<p>Please take time to explore commands further.</p>
+<p>You can see additional command options by using the help option (command name followed by -h). I will also try to attatch a link to documentation for each command.</p>
+<p>If you are <strong>not</strong> the root user, use the sudo command before the following if you run in to any issues (i.e. if you run into issues running <strong>command</strong>, try <strong>sudo command</strong>).</p>
+<div class="section" id="ip">
+<h3><code class="docutils literal notranslate"><span class="pre">ip</span></code><a class="headerlink" href="#ip" title="Permalink to this headline">#</a></h3>
+<p>A great resource for learning about the full functionality of this command is <a class="reference external" href="https://www.linode.com/docs/guides/how-to-use-the-linux-ip-command/">written by Jeff Novotny</a>. This sections has been adapted from his work. <a class="reference external" href="https://access.redhat.com/sites/default/files/attachments/rh_ip_command_cheatsheet_1214_jcs_print.pdf">Redhat</a> also provides a great cheat sheet for comman commands.</p>
+<!-- If the link is broken, i downloaded the file -->
+<p>The <code class="docutils literal notranslate"><span class="pre">ip</span></code> command follows the format <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">[options]</span> <span class="pre">OBJECT</span> <span class="pre">COMMAND</span></code>. It is a command with mutliple functionalities that allow us to explore our computers network.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ip</span></code> command is the newer iteration of the established <code class="docutils literal notranslate"><span class="pre">ifconfig</span></code> command. <code class="docutils literal notranslate"><span class="pre">ip</span></code> also includes functionality from other commands including <code class="docutils literal notranslate"><span class="pre">route</span></code> and <code class="docutils literal notranslate"><span class="pre">arp</span></code>. Thus it has a broader scope and more features than the more limited ifconfig.</p>
+<hr class="docutils" />
+<p>A useful first use of this command is <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">address</span></code>:</p>
+<p><img alt="ip addr" src="../_images/ipaddr.png" /></p>
+<p>This command shows us the different network interfaces our computer is using.</p>
+<p>Here we have to network intefaces:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lo</span></code> stands for “loopback,” which is a special network interface that a system uses to communicate with itself.</p>
+<ul>
+<li><p>Don’t worry too much of the output here for now.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eth0</span></code> typically represents the first Ethernet network interface on the system. It’s what connects the computer to a local network or the internet using an Ethernet cable or similar connection. The <em>IP address assigned to <code class="docutils literal notranslate"><span class="pre">eth0</span></code> is often the address through which the device communicates with other devices on the local network or the internet.</em></p></li>
+</ul>
+<p>We see some color coding in our output:</p>
+<ul class="simple">
+<li><p>Yellow is for MAC address.</p>
+<ul>
+<li><p>The left address is your computers identifier, the right one is the broadcast (hence <code class="docutils literal notranslate"><span class="pre">brd</span></code>) MAC address.</p>
+<ul>
+<li><p>broadcast addresses are addresses that represt <strong>ALL</strong> devices on a given network.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Purple is for our IPv4 address.</p>
+<ul>
+<li><p>Here we also have an adjacent broadcast address.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">/24</span></code> is a subnet mask.</p>
+<ul>
+<li><p>IPv4 addresses will be a set of 4 numbers, each ranging from 0 to 255 and sepearated by periods.</p></li>
+<li><p>Each set of numbers is an 8 bit number. (255 is the largest 8 bit number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/24</span></code> means our network is represented by the first 24 bits -&gt; the first three 8 bit numbers our our network.</p></li>
+<li><p>In this case, when information is being sent to our computer, it gets sent to the first three digits <code class="docutils literal notranslate"><span class="pre">10.0.2</span></code> which is the network we are on. When it reachers our network (our router), the data will be sent to host <code class="docutils literal notranslate"><span class="pre">15</span></code> (our computer).</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Blue is for IPv6 address.</p>
+<ul>
+<li><p>As the internet grows, there is a need for more addresses.</p>
+<ul>
+<li><p>IPv4 is a 32 bit system (2^32possible address).</p></li>
+<li><p>IPv6 is a 128 bit system (2^128 possible addresses).</p></li>
+</ul>
+</li>
+<li><p>Because there are so many possible options for IPv6, the number is represented in hexadecimal (base 16) instead of decimal (base 10).</p></li>
+<li><p>The number will have eight groups of hexadeciaml numbers seprated by colons instead of 4 groups of decinal numbers separated by periods.</p></li>
+<li><p>Our subnet this time is <code class="docutils literal notranslate"><span class="pre">/64</span></code> meaning the first 4 groups of the hexidecimal numbers represent our network, and the next 4 groups our host.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p>Another useful command is <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">neigh</span></code>:</p>
+<p><img alt="ip neigh" src="../_images/ipneigh.png" /></p>
+<p><code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">neigh</span></code> shows information about all other devices on your network. It is similar to a ARP table that maps IP addresses to MAC addresses of devices on a given network.</p>
+<hr class="docutils" />
+<p><code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">route</span></code> is one more useful command. It is similar to the <code class="docutils literal notranslate"><span class="pre">route</span></code> command which may be easier to interperet for some:</p>
+<p><img alt="ip route" src="../_images/iproute.png" /></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">route</span></code> command displays entries from the system’s IP routing table, which contains routes to various network destinations. These entries tell the operating system how to forward IP packets to these destinations, which could be on the local network or remote networks.</p>
+<p>In other words, this command is useful because it may show us address we can talk to ther aren’t on our network (dont share the same first 24 bits as our ip address).</p>
+</div>
+<div class="section" id="ping">
+<h3><code class="docutils literal notranslate"><span class="pre">ping</span></code><a class="headerlink" href="#ping" title="Permalink to this headline">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">ping</span></code> command allows us to check if a ip address is reachable. Recall from previous excercises my ip address was <code class="docutils literal notranslate"><span class="pre">10.0.2.15</span></code> and my gateway was <code class="docutils literal notranslate"><span class="pre">10.0.2.2</span></code>.</p>
+<p>Lets check if I can communicate with my gateway:</p>
+<p><img alt="ping" src="../_images/ping1.png" /></p>
+<p>You can see we are sending 1 packet of size 64 byte, and the amount of time it takes for a round trip each ping.</p>
+<p>Note that when using the command as above, the computer will ping the ip you gave untill you tell it to stop. Stop the ping with <kbd>Ctrl</kbd>+<kbd>c</kbd>.</p>
+<p>We can limit the amount of pings we send with the <code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">[count]</span></code> option. Lets ping google (8.8.8.8) and try this:</p>
+<p><img alt="ping google" src="../_images/ping2.png" /></p>
+<p>Notice how the time for each ping is way larger than pinging my own gateway, this is because google servers are very far away from me!</p>
+<p>This commnd is useful to check our connection to other devices, if we a ping fails there are a few reasons:</p>
+<ul class="simple">
+<li><p>Our computers outgoing connection is down.</p></li>
+<li><p>The address we are trying to reach is down or doesn’t exist.</p></li>
+<li><p>The address we are trying to reach has a firewall that prevents it from recieving pings.</p></li>
+</ul>
+<p><a class="reference external" href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ping">Microsoft</a> provides good documentation for this command and some more functionalities. Note, that we can also use domain names with this command and not just IP addresses.</p>
+</div>
+<div class="section" id="traceroute">
+<h3><code class="docutils literal notranslate"><span class="pre">traceroute</span></code><a class="headerlink" href="#traceroute" title="Permalink to this headline">#</a></h3>
+<p>Another fun command is <code class="docutils literal notranslate"><span class="pre">traceroute</span></code>.</p>
+<p><img alt="traceroute" src="../_images/trace.png" /></p>
+<p>This command very simply can show us the different hops of a packets on its journey to a address. Notice that from the above example we started by visitng servers at UBC, went on to servers in Vancouvr (vncv), and finally reached servers in Seattle where the Google website is stored.</p>
+<p>Note that the example was run on a virtual machine configured with a NAT adapter, if you were to run this command on a virtual machine with a bridge adapter or a regular computer you would not need the <code class="docutils literal notranslate"><span class="pre">-I</span></code> option.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Internet"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="internet1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The Internet</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Bash/basics.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bash Scripting Basics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">Commands</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ip"><code class="docutils literal notranslate"><span class="pre">ip</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ping"><code class="docutils literal notranslate"><span class="pre">ping</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#traceroute"><code class="docutils literal notranslate"><span class="pre">traceroute</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Iddo Sadeh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

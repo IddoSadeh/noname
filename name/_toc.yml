@@ -11,4 +11,11 @@ parts:
   - file: Operating Systems/kali.md
   - file: Operating Systems/terminal.md
   - file: Operating Systems/priv.md
-
+  - file: Operating Systems/tools.md
+- caption: Internet
+  chapters:
+  - file: Internet/internet1.md
+  - file: Internet/net1.md
+- caption: Bash
+  chapters:
+  - file: Bash/basics.md

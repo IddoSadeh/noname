@@ -29,7 +29,7 @@ Head over to the official kali download page for [virtual machines](https://www.
 
 You will see icons for downloading Kali images for differnet virtual machines, since we are using VirtualBox click on the icon circled in red:
 
-![Alt text](kali_install.png)
+![Alt text](images/kali_install.png)
 
 ### Step 2: Install VirtualBox and set up Xubuntu
 

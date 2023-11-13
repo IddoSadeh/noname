@@ -52,9 +52,13 @@ https://jupyterbook.org/en/stable/start/publish.html
 -  every time i make changes, do the following:
 
 To update your online book, make changes to your book’s content on the main branch of your repository, re-build your book with 
- <code>jupyter-book build name/</code>
+
+ <code>jb build --all name/</code>
+
 and then use 
+
  <code>ghp-import -n -p -f name/_build/html</code>
+ 
 to push the newly built HTML to the 
 <code>gh-pages</code> branch.
 
