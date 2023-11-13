@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Users and Priveleges &#8212; My Commonplace Book</title>
+    <title>Internet and Network Commands &#8212; My Commonplace Book</title>
   
   
   
@@ -59,11 +59,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Operating Systems/priv';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Internet/net1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Installing and Updating Tools" href="tools.html" />
-    <link rel="prev" title="Terminal Basics" href="terminal.html" />
+    <link rel="next" title="Bash Scripting Basics" href="../Bash/basics.html" />
+    <link rel="prev" title="The Internet" href="internet1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -150,14 +150,14 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Operating Systems</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="start.html">Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kali.html">Kali Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal Basics</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Users and Priveleges</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools.html">Installing and Updating Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Internet/internet1.html">The Internet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Internet/net1.html">Internet and Network Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/start.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/install.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/kali.html">Kali Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/terminal.html">Terminal Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/priv.html">Users and Priveleges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/tools.html">Installing and Updating Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internet1.html">The Internet</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Internet and Network Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Bash/basics.html">Bash Scripting Basics</a></li>
 </ul>
 
@@ -230,7 +230,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/IddoSadeh/noname/issues/new?title=Issue%20on%20page%20%2FOperating Systems/priv.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/IddoSadeh/noname/issues/new?title=Issue%20on%20page%20%2FInternet/net1.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -260,7 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Operating Systems/priv.md" target="_blank"
+      <li><a href="../_sources/Internet/net1.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +342,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Users and Priveleges</h1>
+    <h1>Internet and Network Commands</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -352,10 +352,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-write-access">Read-Write access</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-access">Changing access</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-user">Add user</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#switch-user">Switch user</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">Commands</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ip"><code class="docutils literal notranslate"><span class="pre">ip</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ping"><code class="docutils literal notranslate"><span class="pre">ping</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#traceroute"><code class="docutils literal notranslate"><span class="pre">traceroute</span></code></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -367,97 +369,108 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="users-and-priveleges">
-<h1>Users and Priveleges<a class="headerlink" href="#users-and-priveleges" title="Permalink to this headline">#</a></h1>
-<p>In this chapter we will talk about users and privileges.</p>
-<p>The new commands we will introduce are:</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Use</p></th>
-<th class="head"><p>Notes</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>chmod</p></td>
-<td><p>change permissions on a file or directory</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>adduser</p></td>
-<td><p>add user to your OS</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>su</p></td>
-<td><p>switch user</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>sudo</p></td>
-<td><p>allows you to elevate privellages</p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-<p>We will also cover the following files:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="internet-and-network-commands">
+<h1>Internet and Network Commands<a class="headerlink" href="#internet-and-network-commands" title="Permalink to this headline">#</a></h1>
+<p>The internet is a network of connected computers. In this section we will talk about basic internet and networking commands.</p>
+<p>The goal of learning these commands is first and foremost to try and understand the internet better by looking at our own systems configuration.</p>
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">#</a></h2>
+<p>I provide basic information of each command shown.</p>
+<p>Please take time to explore commands further.</p>
+<p>You can see additional command options by using the help option (command name followed by -h). I will also try to attatch a link to documentation for each command.</p>
+<p>If you are <strong>not</strong> the root user, use the sudo command before the following if you run in to any issues (i.e. if you run into issues running <strong>command</strong>, try <strong>sudo command</strong>).</p>
+<div class="section" id="ip">
+<h3><code class="docutils literal notranslate"><span class="pre">ip</span></code><a class="headerlink" href="#ip" title="Permalink to this headline">#</a></h3>
+<p>A great resource for learning about the full functionality of this command is <a class="reference external" href="https://www.linode.com/docs/guides/how-to-use-the-linux-ip-command/">written by Jeff Novotny</a>. This sections has been adapted from his work. <a class="reference external" href="https://access.redhat.com/sites/default/files/attachments/rh_ip_command_cheatsheet_1214_jcs_print.pdf">Redhat</a> also provides a great cheat sheet for comman commands.</p>
+<!-- If the link is broken, i downloaded the file -->
+<p>The <code class="docutils literal notranslate"><span class="pre">ip</span></code> command follows the format <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">[options]</span> <span class="pre">OBJECT</span> <span class="pre">COMMAND</span></code>. It is a command with mutliple functionalities that allow us to explore our computers network.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ip</span></code> command is the newer iteration of the established <code class="docutils literal notranslate"><span class="pre">ifconfig</span></code> command. <code class="docutils literal notranslate"><span class="pre">ip</span></code> also includes functionality from other commands including <code class="docutils literal notranslate"><span class="pre">route</span></code> and <code class="docutils literal notranslate"><span class="pre">arp</span></code>. Thus it has a broader scope and more features than the more limited ifconfig.</p>
+<hr class="docutils" />
+<p>A useful first use of this command is <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">address</span></code>:</p>
+<p><img alt="ip addr" src="../_images/ipaddr.png" /></p>
+<p>This command shows us the different network interfaces our computer is using.</p>
+<p>Here we have to network intefaces:</p>
 <ul class="simple">
-<li><p>/etc/cpasswd</p></li>
-<li><p>/et/cshadow</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lo</span></code> stands for “loopback,” which is a special network interface that a system uses to communicate with itself.</p>
+<ul>
+<li><p>Don’t worry too much of the output here for now.</p></li>
 </ul>
-<div class="section" id="read-write-access">
-<h2>Read-Write access<a class="headerlink" href="#read-write-access" title="Permalink to this headline">#</a></h2>
-<p>Before we dive in to the new commands, lets go back to the <code>ls -la</code> command from the previous lesson.</p>
-<p>If you run the command on your root, you should see something like this:</p>
-<p><img alt="Alt text" src="../_images/lsla.png" /></p>
-<p>When looking at the left most column we see 10 letter strings with a combination of of charcters <code>d</code>,<code>r</code>,<code>w</code>,<code>x</code>, and <code>-</code>. These letter combinations actually have meaning and will tell us a lot about that line print.</p>
-<p>If you take a deeper look you will notice that the first character is always either a “<code>d</code>” or a “<code>-</code>”. These characters indicate the type of “thing” we are looking at:</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eth0</span></code> typically represents the first Ethernet network interface on the system. It’s what connects the computer to a local network or the internet using an Ethernet cable or similar connection. The <em>IP address assigned to <code class="docutils literal notranslate"><span class="pre">eth0</span></code> is often the address through which the device communicates with other devices on the local network or the internet.</em></p></li>
+</ul>
+<p>We see some color coding in our output:</p>
 <ul class="simple">
-<li><p><code>d</code> is short for directory (folder).</p></li>
-<li><p><code>-</code> indicates a file.</p></li>
+<li><p>Yellow is for MAC address.</p>
+<ul>
+<li><p>The left address is your computers identifier, the right one is the broadcast (hence <code class="docutils literal notranslate"><span class="pre">brd</span></code>) MAC address.</p>
+<ul>
+<li><p>broadcast addresses are addresses that represt <strong>ALL</strong> devices on a given network.</p></li>
 </ul>
-<p>The next 9 characters are a mix of <code>r</code>,<code>w</code>,<code>x</code>, and <code>-</code>. Here they indicate, in sets of three ordered as <code>r</code>,<code>w</code>,<code>x</code> with <code>-</code> occasionaly replacing one of the letters, what type of access the following users have (from left to right):</p>
-<ul class="simple">
-<li><p>Owner of the file.</p></li>
-<li><p>A Group of owners of the file.</p></li>
-<li><p>All other users.</p></li>
+</li>
 </ul>
-<p>Where the letters indicate the following permissions:</p>
-<ul class="simple">
-<li><p><code>r</code> is short for read privelages.</p></li>
-<li><p><code>w</code> is short for write privelages.</p></li>
-<li><p><code>x</code> is short for execute privelages.</p></li>
-<li><p><code>-</code> is when there are no privelages.</p></li>
+</li>
+<li><p>Purple is for our IPv4 address.</p>
+<ul>
+<li><p>Here we also have an adjacent broadcast address.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">/24</span></code> is a subnet mask.</p>
+<ul>
+<li><p>IPv4 addresses will be a set of 4 numbers, each ranging from 0 to 255 and sepearated by periods.</p></li>
+<li><p>Each set of numbers is an 8 bit number. (255 is the largest 8 bit number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/24</span></code> means our network is represented by the first 24 bits -&gt; the first three 8 bit numbers our our network.</p></li>
+<li><p>In this case, when information is being sent to our computer, it gets sent to the first three digits <code class="docutils literal notranslate"><span class="pre">10.0.2</span></code> which is the network we are on. When it reachers our network (our router), the data will be sent to host <code class="docutils literal notranslate"><span class="pre">15</span></code> (our computer).</p></li>
 </ul>
-<p>This is important as it will allows us later on to identify vulnerable files which can be written and excuted without special privelages.</p>
+</li>
+</ul>
+</li>
+<li><p>Blue is for IPv6 address.</p>
+<ul>
+<li><p>As the internet grows, there is a need for more addresses.</p>
+<ul>
+<li><p>IPv4 is a 32 bit system (2^32possible address).</p></li>
+<li><p>IPv6 is a 128 bit system (2^128 possible addresses).</p></li>
+</ul>
+</li>
+<li><p>Because there are so many possible options for IPv6, the number is represented in hexadecimal (base 16) instead of decimal (base 10).</p></li>
+<li><p>The number will have eight groups of hexadeciaml numbers seprated by colons instead of 4 groups of decinal numbers separated by periods.</p></li>
+<li><p>Our subnet this time is <code class="docutils literal notranslate"><span class="pre">/64</span></code> meaning the first 4 groups of the hexidecimal numbers represent our network, and the next 4 groups our host.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p>Another useful command is <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">neigh</span></code>:</p>
+<p><img alt="ip neigh" src="../_images/ipneigh.png" /></p>
+<p><code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">neigh</span></code> shows information about all other devices on your network. It is similar to a ARP table that maps IP addresses to MAC addresses of devices on a given network.</p>
+<hr class="docutils" />
+<p><code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">route</span></code> is one more useful command. It is similar to the <code class="docutils literal notranslate"><span class="pre">route</span></code> command which may be easier to interperet for some:</p>
+<p><img alt="ip route" src="../_images/iproute.png" /></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">route</span></code> command displays entries from the system’s IP routing table, which contains routes to various network destinations. These entries tell the operating system how to forward IP packets to these destinations, which could be on the local network or remote networks.</p>
+<p>In other words, this command is useful because it may show us address we can talk to ther aren’t on our network (dont share the same first 24 bits as our ip address).</p>
 </div>
-<div class="section" id="changing-access">
-<h2>Changing access<a class="headerlink" href="#changing-access" title="Permalink to this headline">#</a></h2>
-<p>How do you change access to a file?</p>
-<p>Well first lets run the following command:</p>
-<p><code>echo “hello world” &gt; hello.txt </code></p>
-<p>As you can see, when we do this the file does not have many privelages:</p>
-<p><img alt="Alt text" src="../_images/priv2.png" /></p>
-<p>If we want to change the priveleges, you can use the <code>chmod</code> command. Here are two ways:</p>
+<div class="section" id="ping">
+<h3><code class="docutils literal notranslate"><span class="pre">ping</span></code><a class="headerlink" href="#ping" title="Permalink to this headline">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">ping</span></code> command allows us to check if a ip address is reachable. Recall from previous excercises my ip address was <code class="docutils literal notranslate"><span class="pre">10.0.2.15</span></code> and my gateway was <code class="docutils literal notranslate"><span class="pre">10.0.2.2</span></code>.</p>
+<p>Lets check if I can communicate with my gateway:</p>
+<p><img alt="ping" src="../_images/ping1.png" /></p>
+<p>You can see we are sending 1 packet of size 64 byte, and the amount of time it takes for a round trip each ping.</p>
+<p>Note that when using the command as above, the computer will ping the ip you gave untill you tell it to stop. Stop the ping with <kbd>Ctrl</kbd>+<kbd>c</kbd>.</p>
+<p>We can limit the amount of pings we send with the <code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">[count]</span></code> option. Lets ping google (8.8.8.8) and try this:</p>
+<p><img alt="ping google" src="../_images/ping2.png" /></p>
+<p>Notice how the time for each ping is way larger than pinging my own gateway, this is because google servers are very far away from me!</p>
+<p>This commnd is useful to check our connection to other devices, if we a ping fails there are a few reasons:</p>
 <ul class="simple">
-<li><p>add specific privellage with <code>chmode +c filename</code>, where c is the privelage you want to add.<img alt="Alt text" src="../_images/chmod1.png" /></p></li>
-<li><p>add all privelages to all users with <code>chmod 777</code>.</p></li>
+<li><p>Our computers outgoing connection is down.</p></li>
+<li><p>The address we are trying to reach is down or doesn’t exist.</p></li>
+<li><p>The address we are trying to reach has a firewall that prevents it from recieving pings.</p></li>
 </ul>
+<p><a class="reference external" href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ping">Microsoft</a> provides good documentation for this command and some more functionalities. Note, that we can also use domain names with this command and not just IP addresses.</p>
 </div>
-<div class="section" id="add-user">
-<h2>Add user<a class="headerlink" href="#add-user" title="Permalink to this headline">#</a></h2>
-<p>Another thing you may want to learn how to do is add a user to your OS. We can do this with the <code>adduser</code> command:</p>
-<p><img alt="Alt text" src="../_images/adduser1.png" /></p>
-<p>Lets confirm John exists by printing out the content of <code>/etc/passwd</code>, a file that used to have all the passwords for a given system, but now only has previews of the users:</p>
-<p><img alt="Alt text" src="../_images/adduser2.png" /></p>
-<p>The file that stores actual passwords is <code>/etc/shadow</code>:
-<img alt="Alt text" src="../_images/adduser3.png" /></p>
-<p>However, as you can see, it doesn’t show the real password. It shows a hashcode the represents the passowrd - this can be reverse engineering to produce the real password.</p>
+<div class="section" id="traceroute">
+<h3><code class="docutils literal notranslate"><span class="pre">traceroute</span></code><a class="headerlink" href="#traceroute" title="Permalink to this headline">#</a></h3>
+<p>Another fun command is <code class="docutils literal notranslate"><span class="pre">traceroute</span></code>.</p>
+<p><img alt="traceroute" src="../_images/trace.png" /></p>
+<p>This command very simply can show us the different hops of a packets on its journey to a address. Notice that from the above example we started by visitng servers at UBC, went on to servers in Vancouvr (vncv), and finally reached servers in Seattle where the Google website is stored.</p>
+<p>Note that the example was run on a virtual machine configured with a NAT adapter, if you were to run this command on a virtual machine with a bridge adapter or a regular computer you would not need the <code class="docutils literal notranslate"><span class="pre">-I</span></code> option.</p>
 </div>
-<div class="section" id="switch-user">
-<h2>Switch user<a class="headerlink" href="#switch-user" title="Permalink to this headline">#</a></h2>
-<p>We can switch between users with the <code>su</code> command:</p>
-<p><img alt="Alt text" src="../_images/su.png" /></p>
-<p>You may notice that when we tried switching to root we are prompted for a password, however when we switch to john we were not. This is because john doesnt have “sudo” permission. A user who has “sudo” permissions will be in a sudoers file. Anybody in that file has full access to the computers file. We can see this difference if we try to change a users password from a different user:</p>
-<p><img alt="Alt text" src="../_images/sudo1.png" />
-<img alt="Alt text" src="../_images/sudo2.png" /></p>
 </div>
 </div>
 
@@ -474,7 +487,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./Operating Systems"
+            path: "./Internet"
         },
         predefinedOutput: true
     }
@@ -493,20 +506,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="terminal.html"
+       href="internet1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Terminal Basics</p>
+        <p class="prev-next-title">The Internet</p>
       </div>
     </a>
     <a class="right-next"
-       href="tools.html"
+       href="../Bash/basics.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Installing and Updating Tools</p>
+        <p class="prev-next-title">Bash Scripting Basics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -528,10 +541,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-write-access">Read-Write access</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-access">Changing access</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-user">Add user</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#switch-user">Switch user</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">Commands</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ip"><code class="docutils literal notranslate"><span class="pre">ip</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ping"><code class="docutils literal notranslate"><span class="pre">ping</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#traceroute"><code class="docutils literal notranslate"><span class="pre">traceroute</span></code></a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

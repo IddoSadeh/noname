@@ -4,7 +4,7 @@
 We will be living in the terminal when using linux.
 
 The terminal can be accessed in the top left of your screen (circled in red):
-![Alt text](terminal.png)
+![Alt text](images/terminal.png)
 
 The most commands we will use to start at:
 
@@ -59,7 +59,7 @@ Open your terminal and do the following:
 
 
 At this point your terminal should look something like this:
-    ![Alt text](ex1a.png)
+    ![Alt text](images/ex1a.png)
 
  *note: from now own, enter after you are instructed to type something.*
 
@@ -113,18 +113,18 @@ The goal of this excercise it familirize yourself with some more common terminal
 
 6. What if we want to move copy the file to a nother location? Type <code>cp hello.txt /home/kali</code>. Navigate to <code>kali</code> and see how it moved a folder.
 
-    ![Alt text](copy.png)
+    ![Alt text](images/copy.png)
 
 7. What if we want to delete the file? <code>rm hello.txt</code>. Notice it only deletes it in the directory you are working on.
 
 At this point my terminal looks like these:
-    ![Alt text](remove.png)
+    ![Alt text](images/remove.png)
 
 Notice that <code>hello.txt</code> exists in the <code>kali</code> directory but not the <code>Desktop</code> directoy. 
 
 8. Move the text file to a different directoy <code>mv hello.txt Downloads/</code>
 
-    ![Alt text](move.png)
+    ![Alt text](images/move.png)
 
 9. Navigate back to the base folder. Now what if we wanted to find our text file? Type <code>locate</code>.
 
@@ -142,7 +142,7 @@ The goal of this excercise it familirize yourself with a few more common termina
 
 1. Right now we are using the default password, thats not very secure. You can update your password as following:
 
-    ![Alt text](passwd.png)
+    ![Alt text](images/passwd.png)
      
     *Remember, passwords wont show up as being typed, but the terminal will read them.*
 

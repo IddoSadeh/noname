@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kali Linux &#8212; My Commonplace Book</title>
+    <title>Chapter 4: Network Commands 2 &#8212; My Commonplace Book</title>
   
   
   
@@ -59,11 +59,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Operating Systems/kali';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'internet/netcmd2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Terminal Basics" href="terminal.html" />
-    <link rel="prev" title="Installations" href="install.html" />
+    <link rel="prev" title="Internet Basics 2" href="internet2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -150,15 +149,15 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Operating Systems</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="start.html">Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installations</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Kali Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="priv.html">Users and Priveleges</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools.html">Installing and Updating Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Internet/internet1.html">The Internet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Internet/net1.html">Internet and Network Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Bash/basics.html">Bash Scripting Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/start.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/install.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/kali.html">Kali Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/terminal.html">Terminal Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operating%20Systems/priv.html">Users and Priveleges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internet1.html">Internet Basics 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="netcmd1.html">Network Commands 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internet2.html">Internet Basics 2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 4: Network Commands 2</a></li>
 </ul>
 
     </div>
@@ -230,7 +229,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/IddoSadeh/noname/issues/new?title=Issue%20on%20page%20%2FOperating Systems/kali.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/IddoSadeh/noname/issues/new?title=Issue%20on%20page%20%2Finternet/netcmd2.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -260,7 +259,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Operating Systems/kali.md" target="_blank"
+      <li><a href="../_sources/internet/netcmd2.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +341,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Kali Linux</h1>
+    <h1>Chapter 4: Network Commands 2</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -352,12 +351,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-network-commands">Common Network Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-creating-and-editing-files">Viewing, Creating, and Editing Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-stopping-services">Starting and Stopping Services</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-updating-tools">Installing and Updating Tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting-with-bash">Scripting with Bash</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expanding-our-toolkit">Expanding Our Toolkit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-tracing-the-route">Exercise 1: Tracing the Route</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-querying-dns">Exercise 2: Querying DNS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-checking-open-ports">Exercise 3: Checking Open Ports</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-monitoring-network-traffic">Exercise 4: Monitoring Network Traffic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-fetching-data">Exercise 5: Fetching Data</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -369,47 +371,110 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="kali-linux">
-<h1>Kali Linux<a class="headerlink" href="#kali-linux" title="Permalink to this headline">#</a></h1>
-<p><em>Note: the next few chapters will work with any version of Linux, this chapter quickly introduces Kali UI.</em>*</p>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
-<p>As with any operating you will see some familiar things on Kali.</p>
-<p>Your screen should look like this:
-<img alt="Alt text" src="Operating Systems/home.png" /></p>
-<p>The top bar has useful icons you may need in the future, from left to right these are:</p>
+  <div class="section" id="chapter-4-network-commands-2">
+<h1>Chapter 4: Network Commands 2<a class="headerlink" href="#chapter-4-network-commands-2" title="Permalink to this headline">#</a></h1>
+<div class="section" id="expanding-our-toolkit">
+<h2>Expanding Our Toolkit<a class="headerlink" href="#expanding-our-toolkit" title="Permalink to this headline">#</a></h2>
+<p>Armed with a deeper understanding of the internet city’s workings from the previous chapter, let’s extend our toolkit of Linux networking commands to navigate this city proficiently.</p>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">traceroute</span></code></strong>:</p>
 <ul class="simple">
-<li><p>Application finder</p></li>
-<li><p>Minimize all windows</p></li>
-<li><p>File explorer</p></li>
-<li><p>Notepad</p></li>
-<li><p>Firefox (web browser)</p></li>
-<li><p>Terminal</p></li>
-<li><p>Tabs 1, 2, 3, 4</p></li>
-<li><p>CPU usage stats</p></li>
-<li><p>Internet status</p></li>
-<li><p>Volume</p></li>
-<li><p>Notifications</p></li>
-<li><p>Battery status</p></li>
-<li><p>Time</p></li>
-<li><p>Lock screen</p></li>
-<li><p>Power button</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">traceroute</span></code> command is like having a GPS that shows the path your car (packet) takes to reach another building (device). It lists all the gas stations (hops) your car stops at along the way.</p></li>
 </ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">nslookup</span></code> / <code class="docutils literal notranslate"><span class="pre">dig</span></code></strong>:</p>
+<ul class="simple">
+<li><p>When you want to find the numerical address of a building using its friendly name, <code class="docutils literal notranslate"><span class="pre">nslookup</span></code> and <code class="docutils literal notranslate"><span class="pre">dig</span></code> are your go-to tools. They query the city directory (DNS) to get the information for you.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">telnet</span></code> / <code class="docutils literal notranslate"><span class="pre">ssh</span></code></strong>:</p>
+<ul class="simple">
+<li><p>These commands are like having special keys that allow you to enter other buildings (devices) and interact with them. <code class="docutils literal notranslate"><span class="pre">telnet</span></code> is like a regular key, while <code class="docutils literal notranslate"><span class="pre">ssh</span></code> is like a high-security key offering extra protection.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">iptables</span></code></strong>:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">iptables</span></code> command helps you set up and manage the security guards (firewalls) at your building’s doors (ports), controlling who can come in and go out.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">nmap</span></code></strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nmap</span></code> is like having a special gadget that lets you see which doors (ports) are open in other buildings and what activities are happening inside.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">curl</span></code> / <code class="docutils literal notranslate"><span class="pre">wget</span></code></strong>:</p>
+<ul class="simple">
+<li><p>These commands allow you to send or receive letters (data) to/from other buildings. They are like courier services that can deliver or pick up packages for you.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">tcpdump</span></code></strong>:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">tcpdump</span></code> command is like having a security camera that records all the letters (packets) coming in and going out of your building, letting you review them later.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">hostname</span></code></strong>:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">hostname</span></code> command lets you view or change your building’s friendly name, making it easier for others to find you in the city.</p></li>
+</ul>
+</li>
+</ol>
 </div>
-<div class="section" id="common-network-commands">
-<h2>Common Network Commands<a class="headerlink" href="#common-network-commands" title="Permalink to this headline">#</a></h2>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
+<p>Let’s solidify our understanding of these commands with some hands-on exercises.</p>
+<div class="section" id="exercise-1-tracing-the-route">
+<h3>Exercise 1: Tracing the Route<a class="headerlink" href="#exercise-1-tracing-the-route" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li><p>Open your terminal.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">traceroute</span> <span class="pre">8.8.8.8</span></code> and hit <em>Enter</em>.</p>
+<ul class="simple">
+<li><p>Observe the path your packet takes to reach Google’s public DNS server.</p></li>
+</ul>
+</li>
+</ol>
 </div>
-<div class="section" id="viewing-creating-and-editing-files">
-<h2>Viewing, Creating, and Editing Files<a class="headerlink" href="#viewing-creating-and-editing-files" title="Permalink to this headline">#</a></h2>
+<div class="section" id="exercise-2-querying-dns">
+<h3>Exercise 2: Querying DNS<a class="headerlink" href="#exercise-2-querying-dns" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li><p>In the terminal, type <code class="docutils literal notranslate"><span class="pre">nslookup</span> <span class="pre">google.com</span></code> and hit <em>Enter</em>.</p>
+<ul class="simple">
+<li><p>View the IP addresses associated with <a class="reference external" href="http://google.com">google.com</a>.</p></li>
+</ul>
+</li>
+</ol>
 </div>
-<div class="section" id="starting-and-stopping-services">
-<h2>Starting and Stopping Services<a class="headerlink" href="#starting-and-stopping-services" title="Permalink to this headline">#</a></h2>
+<div class="section" id="exercise-3-checking-open-ports">
+<h3>Exercise 3: Checking Open Ports<a class="headerlink" href="#exercise-3-checking-open-ports" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-F</span> <span class="pre">192.168.1.1</span></code> (replace with a known IP in your network) and hit <em>Enter</em>.</p>
+<ul class="simple">
+<li><p>Identify the open ports on the specified device.</p></li>
+</ul>
+</li>
+</ol>
 </div>
-<div class="section" id="installing-and-updating-tools">
-<h2>Installing and Updating Tools<a class="headerlink" href="#installing-and-updating-tools" title="Permalink to this headline">#</a></h2>
+<div class="section" id="exercise-4-monitoring-network-traffic">
+<h3>Exercise 4: Monitoring Network Traffic<a class="headerlink" href="#exercise-4-monitoring-network-traffic" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">tcpdump</span> <span class="pre">-i</span> <span class="pre">eth0</span></code> (replace <code class="docutils literal notranslate"><span class="pre">eth0</span></code> with your network interface) and hit <em>Enter</em>.</p>
+<ul class="simple">
+<li><p>Observe the packets traveling in and out of your machine.</p></li>
+</ul>
+</li>
+</ol>
 </div>
-<div class="section" id="scripting-with-bash">
-<h2>Scripting with Bash<a class="headerlink" href="#scripting-with-bash" title="Permalink to this headline">#</a></h2>
+<div class="section" id="exercise-5-fetching-data">
+<h3>Exercise 5: Fetching Data<a class="headerlink" href="#exercise-5-fetching-data" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">https://example.com</span></code> or <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">https://example.com</span></code> and hit <em>Enter</em>.</p>
+<ul class="simple">
+<li><p>Observe how you retrieve the webpage data.</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p>In this chapter, we’ve expanded our networking command toolkit, diving into more advanced commands that help navigate the network, secure our building, and interact with other buildings. These commands are instrumental in managing, troubleshooting, and securing your network, setting a strong foundation for exploring more advanced networking topics in the future.</p>
+</div>
 </div>
 </div>
 
@@ -426,7 +491,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./Operating Systems"
+            path: "./internet"
         },
         predefinedOutput: true
     }
@@ -445,22 +510,13 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="install.html"
+       href="internet2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installations</p>
+        <p class="prev-next-title">Internet Basics 2</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="terminal.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Terminal Basics</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -480,12 +536,15 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-network-commands">Common Network Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-creating-and-editing-files">Viewing, Creating, and Editing Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-stopping-services">Starting and Stopping Services</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-updating-tools">Installing and Updating Tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting-with-bash">Scripting with Bash</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expanding-our-toolkit">Expanding Our Toolkit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-tracing-the-route">Exercise 1: Tracing the Route</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-querying-dns">Exercise 2: Querying DNS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-checking-open-ports">Exercise 3: Checking Open Ports</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-monitoring-network-traffic">Exercise 4: Monitoring Network Traffic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-fetching-data">Exercise 5: Fetching Data</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
